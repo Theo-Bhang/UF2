@@ -7,7 +7,7 @@
     <title>Annonces</title>
 </head>
 <header>
-        <h1>Stephi Place </h1>
+        <h1>Accueil</h1>
 		<div class="topnav">
 			<a class="active" href="Accueil.php">Home</a>
 			<a href="about.html">A Propos</a>
