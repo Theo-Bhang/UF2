@@ -10,9 +10,9 @@
         <h1 class="title">@ HOME A GAME </h1>
 		<div class="topnav">
 			<a class="active" href="#Accueil">Home</a>
-			<a href="#about">A Propos</a>
-			<a href="#connection" >Se connecter</a>
-			<a href="#formulaire" >Créer un compte</a>
+			<a href="./about.php">A Propos</a>
+			<a href="./connexion.php" >Se connecter</a>
+			<a href="./Enregistrement.php" >Créer un compte</a>
 		  </div>
     </header>
 	<body>
