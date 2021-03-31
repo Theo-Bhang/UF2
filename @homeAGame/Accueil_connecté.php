@@ -20,7 +20,7 @@
         <br/>
 		<br/>
 		<a class="lien" href="classement.php"><p> Classement général </p> </a>
-		<a class="lien" href="inscription_defi.php"><p> S'inscrire</p> </a>
+		<a class="inscription_defi.php"><p> S'inscrire</p> </a>
 
 
     </body>
