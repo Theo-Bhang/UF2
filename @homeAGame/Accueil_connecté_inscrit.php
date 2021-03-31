@@ -1,3 +1,10 @@
+<?php
+    session_start();
+    if (!isset($_SESSION) || !isset($_SESSION['mail'])) {
+        header('Location: accueil.php');
+        exit();
+    } else {
+?>
 <!doctype html>
 <html lang="fr"> 
 	<head >
@@ -24,3 +31,6 @@
 
     </body>
 </html> 
+<?php
+    }
+?>

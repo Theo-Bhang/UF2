@@ -1,0 +1,151 @@
+header {
+    font-family: 'Trebuchet MS', Arial, Helvetica, sans-serif;
+    font-size: 18px;
+}
+
+.title {
+    padding: 10px;
+    font-weight: 900;
+    color: black;
+}
+
+body {
+    background-image: url('img/fondconn5.jpg');
+    background-size: cover;
+    font-family: 'Trebuchet MS', Arial, Helvetica, sans-serif;
+    background-color: rgb(255, 255, 255);
+    color: black;
+}
+
+section {
+    display: flex;
+}
+
+body section a img {
+    margin: 100px auto;
+    width: 900px;
+    height: 400px;
+}
+
+body a.lien {
+    background: rgba(0, 0, 0, .8);
+    box-sizing: border-box;
+    box-shadow: 0 15px 25px rgba(0, 0, 0, .5);
+    border-radius: 10px;
+    position: relative;
+    margin-left: auto;
+    margin-right: auto;
+    height: 300px;
+    width: 600px;
+    vertical-align: middle;
+    border-radius: 10px;
+    color: white;
+    border: 1px solid #2196F3;
+}
+
+body a.lien:hover {
+    color: #2196F3;
+}
+
+body a.lien p {
+    position: relative;
+    top: 115px;
+    font-size: 18px;
+    color: white;
+}
+
+body p {
+    text-align: center;
+    font-size: 18px;
+    color: white;
+}
+
+body a {
+    color: white;
+}
+
+.topnav {
+    overflow: hidden;
+    background-color: #e9e9e9;
+}
+
+.topnav a {
+    float: left;
+    display: block;
+    color: black;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    font-size: 17px;
+}
+
+
+/* Change the color of links on hover */
+
+.topnav a:hover {
+    color: white;
+    background-color: #2196F3;
+}
+
+
+/* Style the "active" element to highlight the current page */
+
+.topnav a.active {
+    background-color: #2196F3;
+    color: white;
+}
+
+
+/* Style the search box inside the navigation bar */
+
+body input[type=text] {
+    float: right;
+    padding: 6px;
+    border: none;
+    margin-top: 8px;
+    margin-right: 16px;
+    font-size: 17px;
+}
+
+
+/* When the screen is less than 600px wide, stack the links and the search field vertically instead of horizontally */
+
+@media screen and (max-width: 600px) {
+    .topnav a,
+    .topnav input[type=text] {
+        float: none;
+        display: block;
+        text-align: left;
+        width: 100%;
+        margin: 0;
+        padding: 14px;
+    }
+    .topnav input[type=text] {
+        border: 1px solid #ccc;
+    }
+}
+
+body a {
+    float: center;
+    display: block;
+    color: black;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    font-size: 17px;
+}
+
+
+/* Change the color of links on hover */
+
+body a:hover {
+    color: black;
+}
+
+
+/* Style the "active" element to highlight the current page */
+
+body a.active {
+    background-color: #2196F3;
+    color: white;
+}
