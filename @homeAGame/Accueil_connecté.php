@@ -12,7 +12,7 @@
             <h2 class="title">Bienvenue </h2>
             <div class="topnav">
                 <a class="active" href="Accueil_connecté.php">Home</a>
-                <a href="about_connecté.html">A Propos</a>
+                <a href="about.html">A Propos</a>
                 <a href="mission.php">Mission</a>
                 <a href="profil.php">Mon Compte</a>
             </div>
