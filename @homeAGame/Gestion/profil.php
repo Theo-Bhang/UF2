@@ -18,7 +18,7 @@ if (!isset($_SESSION) || !isset($_SESSION['mail'])) {
   <body>
   <header>
     <img class="logo" src="../img/LOGO-ON-THE-ROAD.png" alt="logo">
-        <h1 class="title">Mon profil : </h1>
+  
         
         <nav>
         <ul class="nav_links">

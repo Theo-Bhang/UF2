@@ -39,14 +39,6 @@ if (!isset($_SESSION) || !isset($_SESSION['mail'])) {
         <a class="lien" href="../OTRA/classement.php">
             <p> Classement général </p>
         </a>
-        <a class="inscription.php">
-            <p> S'inscrire</p>
-        </a>
-
-
-        <a href='continu.php'>
-            <p>Voulez-vous vous continuer ?</p>
-        </a>
     </body>
 
     </html>

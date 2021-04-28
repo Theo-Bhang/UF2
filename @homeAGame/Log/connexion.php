@@ -19,7 +19,7 @@ session_start();
             <ul class="nav_links">
                 <li><a href="../Accueil/accueil.php">Accueil</a></li>
                 <li><a href="../OTRA/classement.php">Classement</a></li>
-                <li><a href="../Divers/aboutnc.html">A propos</a></li>
+                <li><a href="../Divers/about.php">A propos</a></li>
             </ul>
         </nav>
         <a class="cta" href="#"><button>Se connecter</button></a>

@@ -28,7 +28,7 @@ else {
             <ul class="nav_links">
                 <li><a href="#">Accueil</a></li>
                 <li><a href="../OTRA/classement.php">Classement</a></li>
-                <li><a href="../Divers/aboutnc.html">A propos</a></li>
+                <li><a href="../Divers/about.php">A propos</a></li>
 				<li><a href="#">S'inscrire</a></li>
             </ul>
         </nav>

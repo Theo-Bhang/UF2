@@ -21,7 +21,7 @@
                 <li><a href="#">Accueil</a></li>
                 <li><a href="../OTRA/classement.php">Classement</a></li>
                 <li><a href="../OTRA/mission.php">Mission</a></li>
-                <li><a href="../Divers/aboutnc.html">A propos</a></li>	
+                <li><a href="../Divers/about.php">A propos</a></li>	
             </ul>
         </nav>
         <a class="cta" href="../Gestion/profil.php"><button>Mon compte</button></a>
