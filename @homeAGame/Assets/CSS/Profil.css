@@ -1,7 +1,4 @@
-header {
-    font-family: 'Trebuchet MS', Arial, Helvetica, sans-serif;
-    font-size: 18px;
-}
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@500&display=swap');
 
 .title {
     padding: 10px;
@@ -13,8 +10,7 @@ body {
     background-image: url('img/fondconn5.jpg');
     background-size: cover;
     font-family: 'Trebuchet MS', Arial, Helvetica, sans-serif;
-    background-color: rgb(255, 255, 255);
-    color: black;
+    color: white;
 }
 
 section {
@@ -64,37 +60,64 @@ body a {
     color: white;
 }
 
-.topnav {
-    overflow: hidden;
-    background-color: #e9e9e9;
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    background-color: #24252A;
 }
 
-.topnav a {
-    float: left;
-    display: block;
-    color: black;
-    text-align: center;
-    padding: 14px 16px;
+li, a, button {
+    font-family: "Montserrat", sans-serif;
+    font-weight: 500;
+    font-size: 16px;
+    color: #edf0f1;
     text-decoration: none;
-    font-size: 17px;
 }
 
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 30px 10%;
+}
 
-/* Change the color of links on hover */
+.logo {
+    cursor: pointer;
+    width: 150px;
+    height: 70px;
+}
 
-.topnav a:hover {
+.nav_links {
+    list-style: none;
+}
+
+.nav_links li {
+    display: inline-block;
+    padding: 0px 20px;
+}
+
+.nav_links li a {
+    transition: all 0.3s ease 0s;
     color: white;
-    background-color: #2196F3;
 }
 
-
-/* Style the "active" element to highlight the current page */
-
-.topnav a.active {
-    background-color: #2196F3;
-    color: white;
+.nav_links li a:hover {
+    color: #0088a9;
 }
 
+button {
+    padding: 9px 25px;
+    background-color: rgba(0,136,169,1);
+    border: none;
+    border-radius: 50px;
+    cursor: pointer;
+    transition: all 0.3s ease 0s;
+}
+
+button:hover {
+    background-color: rgba(0,136,169,0.8);
+}
 
 /* Style the search box inside the navigation bar */
 

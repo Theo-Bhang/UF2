@@ -22,23 +22,19 @@ if (!empty($_SESSION)) {
         <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no" />
     </head>
     <header>
-        <h1 class="title">@ HOME A GAME </h1>
-		<div class="topnav">
-			<a class="active" href="#Accueil">Home</a>
-			<a href="../Divers/about.php">A Propos</a>
-			<a href="../Log/connexion.php" >Se connecter</a>
-			<a href="../Log/Enregistrement.php" >Créer un compte</a>
-		  </div>
+        <img class="logo" src="../Img/LOGO-ON-THE-ROAD.png" alt="logo">
+        <nav>
+            <ul class="nav_links">
+                <li><a href="#">Accueil</a></li>
+				<li><a href="../OTRA/classement.php">Classement</a></li>
+                <li><a href="../Divers/aboutnc.html">A propos</a></li>
+            </ul>
+        </nav>
+        <a class="cta" href="../Log/connexion.php"><button>Se connecter</button></a>
     </header>
 	<body>
 		<br/>
 		<br/>
-		<a class="lien" href="classement.php"><p> Classement général </p> </a>
-		<a class="lien" href="article.php"><p> Article  </p> </a>
-
-
-		
-        
-        
+		<a class="lien" href="../OTRA/classement.php"><p> Classement général </p> </a> 
     </body>
 </html> 

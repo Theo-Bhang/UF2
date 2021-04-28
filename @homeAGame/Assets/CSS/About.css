@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@500&display=swap');
+
 body {
     font-family: sans-serif;
     background-image: url('img/fondconn5.jpg');
@@ -46,7 +48,7 @@ div img:hover {
     opacity: 1;
 }
 
-@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@500&display=swap');
+
 * {
     box-sizing: border-box;
     margin: 0;
