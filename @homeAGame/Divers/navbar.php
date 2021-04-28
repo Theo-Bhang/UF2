@@ -7,12 +7,12 @@
     <title>@ Home a Game Navbar</title>
     <meta name="description" content="">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" href="./Assets/CSS/navbar.css">
+    <link rel="stylesheet" href="../Assets\CSS/navbar.css">
 </head>
 
 <body>
     <header>
-        <img class="logo" src="img/LOGO-ON-THE-ROAD.png" alt="logo">
+        <img class="logo" src="../Img/LOGO-ON-THE-ROAD.png" alt="logo">
         <nav>
             <ul class="nav_links">
                 <li><a href="#">Accueil</a></li>

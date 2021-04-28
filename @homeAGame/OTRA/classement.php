@@ -3,19 +3,25 @@
 	<head >
 		<meta charset="utf-8" />
         <title>Classement </title>
-        <link rel="stylesheet" href="./Assets/CSS/Accueil.css"/>
+        <link rel="stylesheet" href="../Assets\CSS/Accueil.css"/>
         <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no" />
     </head>
-    <body>
-        <header>
-            <h1 class="title">Classement @ Home A Game </h1>
-            <div class="topnav">
-                <a class="active" href="../Accueil/Accueil_connecté.php">Home</a>
-                <a href="../Divers/about.php">A Propos</a>
-                <a href="../OTRA/mission.php">Mission</a>
-                <a href="../Gestion/profil.php">Mon Compte</a>
-            </div>
+    
+    <header>
+            <img class="logo" src="../Img/LOGO-ON-THE-ROAD.png" alt="logo">
+        <nav>
+            <ul class="nav_links">
+                <li><a href="../Accueil/accueil.php">Accueil</a></li>
+                <li><a href="#">Classement</a></li>
+                <li><a href="../OTRA/mission.php">Mission</a></li>
+                <li><a href="../Divers/aboutnc.html">A propos</a></li>
+				
+            </ul>
+        </nav>
+        <a class="cta" href="../Gestion/profil.php"><button>Mon compte</button></a>
         </header>
+
+        <body>
         <br/>
 		<br/>
         <a class="lien">

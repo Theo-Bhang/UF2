@@ -14,14 +14,16 @@ session_start();
 
 <body>
 <header>
-        <h1 class="title">@ HOME A GAME </h1>
-		<div class="topnav">
-			<a href="../Accueil/accueil.php">Home</a>
-			<a href="../Divers/about.php">A Propos</a>
-			<a class="active" href="#" >Se connecter</a>
-			<a href="../Log/Enregistrement.php" >Créer un compte</a>
-		  </div>
-    </header>
+            <img class="logo" src="../Img/LOGO-ON-THE-ROAD.png" alt="logo">
+        <nav>
+            <ul class="nav_links">
+                <li><a href="../Accueil/accueil.php">Accueil</a></li>
+                <li><a href="../OTRA/classement.php">Classement</a></li>
+                <li><a href="../Divers/aboutnc.html">A propos</a></li>
+            </ul>
+        </nav>
+        <a class="cta" href="#"><button>Se connecter</button></a>
+        </header>
     <div class="card-header">
         <h4>Login</h4>
     </div>

@@ -12,16 +12,20 @@ session_start();
     <title>Enregistrement</title>
 </head>
 
-<body>
+
 <header>
-        <h1 class="title">@ HOME A GAME </h1>
-		<div class="topnav">
-			<a href="../Accueil/accueil.php">Home</a>
-			<a href="../Divers/about.php">A Propos</a>
-			<a href="./connexion.php" >Se connecter</a>
-			<a class="active" href="#" >Créer un compte</a>
-		  </div>
-    </header>
+            <img class="logo" src="../Img/LOGO-ON-THE-ROAD.png" alt="logo">
+        <nav>
+            <ul class="nav_links">
+                <li><a href="../Accueil/accueil.php">Accueil</a></li>
+                <li><a href="../OTRA/classement.php">Classement</a></li>
+                <li><a href="../Divers/aboutnc.html">A propos</a></li>
+				<li><a href="../Log/connexion.php/">S'inscrire</a></li>
+            </ul>
+        </nav>
+        <a class="cta" href="../Gestion/profil.php"><button>Mon compte</button></a>
+        </header>
+        <body>
     <?php
     $form = "
                             <h4>Enregistrement</h4>

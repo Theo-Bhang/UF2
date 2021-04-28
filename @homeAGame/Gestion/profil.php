@@ -181,30 +181,33 @@ if (!isset($_SESSION) || !isset($_SESSION['mail'])) {
 else {
 
 
-?>
+  ?>
   <!doctype html>
   <html>
 
   <head lang="fr">
     <meta charset="UTF-8">
-    <link rel="stylesheet" href="../Assets/CSS/Profil.css" />
+    <link rel="stylesheet" href="../Assets\CSS/Profil.css" />
     <meta content="width=device-width, initial-scale=1, maximum-scale=1, shrink-to-fit=no" name="viewport">
     <title>Profil</title>
   </head>
 
-  <body>
-  <header>
-        <h1 class="title">Mon profil : </h1>
-        <div class="topnav">
-            <a href="../Accueil/Accueil_connecté.php">Home</a>
-            <a href="../Divers/about.php">A Propos</a>
-            <a href="../OTRA/mission.php">Mission</a>
-            <a class="active" href="#">Mon Compte</a>
-            <a href="../Deco/deco.php">Se déconnecter</a>
-        </div>
-    </header>
   
-    <?php
+  <header>
+            <img class="logo" src="../Img/LOGO-ON-THE-ROAD.png" alt="logo">
+        <nav>
+            <ul class="nav_links">
+                <li><a href="../Accueil/accueil.php">Accueil</a></li>
+                <li><a href="../OTRA/classement.php">Classement</a></li>
+                <li><a href="../Divers/aboutnc.html">A propos</a></li>
+				        <li><a href="../Deco/deco">Se déconnecter</a></li>
+            </ul>
+        </nav>
+        <a class="cta" href="#"><button>Mon compte</button></a>
+        </header>
+  <body>
+    
+  <?php
     $db_params = parse_ini_file('../db.ini', true);
     $pdo = new PDO($db_params['db']['url'], $db_params['db']['user'], $db_params['db']['pass']);
 
@@ -353,4 +356,5 @@ else {
   </html>
 <?php
 }
+?>
 ?>
