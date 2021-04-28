@@ -7,7 +7,7 @@ session_start();
 <head>
     <meta charset="UTF-8">
     
-    <link rel="stylesheet" href="./Assets/CSS/Profil.css"/>
+    <link rel="stylesheet" href="../Assets/CSS/Profil.css"/>
     <meta content="width=device-width, initial-scale=1, maximum-scale=1, shrink-to-fit=no" name="viewport">
     <title>Enregistrement</title>
 </head>
@@ -16,10 +16,10 @@ session_start();
 <header>
         <h1 class="title">@ HOME A GAME </h1>
 		<div class="topnav">
-			<a href="./accueil.php">Home</a>
-			<a href="./about.php">A Propos</a>
+			<a href="../Accueil/accueil.php">Home</a>
+			<a href="../Divers/about.php">A Propos</a>
 			<a href="./connexion.php" >Se connecter</a>
-			<a class="active" href="./Enregistrement.php" >Créer un compte</a>
+			<a class="active" href="#" >Créer un compte</a>
 		  </div>
     </header>
     <?php
@@ -71,12 +71,12 @@ session_start();
                         </div>
                    ";
 
-    $db_params = parse_ini_file('db.ini', true);
+    $db_params = parse_ini_file('../db.ini', true);
     $pdo = new PDO($db_params['db']['url'], $db_params['db']['user'], $db_params['db']['pass']);
     $countacc = 0;
     $rqt1 = <<<SQL
             SELECT email
-            FROM User 
+            FROM user 
         SQL;
     $stmt1 = $pdo->prepare($rqt1);
     $stmt1->execute();
@@ -146,13 +146,13 @@ session_start();
                 'cost' => 12,
             ];
             $mdp = password_hash($mdp, PASSWORD_BCRYPT, $options);
-            $stmt = $pdo->prepare("INSERT INTO `User`( `nom`, `prenom`, `mdp`, `email`) VALUES (:nom,:prenom,:mdp,:email)");
+            $stmt = $pdo->prepare("INSERT INTO user( `nom`, `prenom`, `mdp`, `email`) VALUES (:nom,:prenom,:mdp,:email)");
             $stmt->bindParam(':nom', $nom);
             $stmt->bindParam(':prenom', $prenom);
             $stmt->bindParam(':email', $email);
             $stmt->bindParam(':mdp', $mdp);
             $stmt->execute();
-            header('Location: Accueil_connecté.php');
+            header('Location: ../Accueil/Accueil_connecté.php');
             exit();
         }
 

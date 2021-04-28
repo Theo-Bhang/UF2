@@ -10,7 +10,7 @@
     }
     if(isset($_SESSION['nom'])==false && isset($_SESSION['mail'])==false)
     {
-        header('Location: accueil.php');
+        header('Location: ../Accueil/accueil.php');
         exit();
           
     }else{

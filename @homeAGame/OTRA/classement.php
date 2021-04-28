@@ -10,10 +10,10 @@
         <header>
             <h1 class="title">Classement @ Home A Game </h1>
             <div class="topnav">
-                <a class="active" href="Accueil_connecté.php">Home</a>
-                <a href="about.html">A Propos</a>
-                <a href="mission.php">Mission</a>
-                <a href="profil.php">Mon Compte</a>
+                <a class="active" href="../Accueil/Accueil_connecté.php">Home</a>
+                <a href="../Divers/about.php">A Propos</a>
+                <a href="../OTRA/mission.php">Mission</a>
+                <a href="../Gestion/profil.php">Mon Compte</a>
             </div>
         </header>
         <br/>

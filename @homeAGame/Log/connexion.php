@@ -7,7 +7,7 @@ session_start();
 
 <head lang="fr">
     <meta charset="UTF-8">
-    <link rel="stylesheet" href="./Assets/CSS/Profil.css"/>
+    <link rel="stylesheet" href="../Assets/CSS/Profil.css"/>
     <meta content="width=device-width, initial-scale=1, maximum-scale=1, shrink-to-fit=no" name="viewport">
     <title>Accueil</title>
 </head>
@@ -16,17 +16,17 @@ session_start();
 <header>
         <h1 class="title">@ HOME A GAME </h1>
 		<div class="topnav">
-			<a href="./accueil.php">Home</a>
-			<a href="./about.php">A Propos</a>
-			<a class="active" href="./connexion.php" >Se connecter</a>
-			<a href="./Enregistrement.php" >Créer un compte</a>
+			<a href="../Accueil/accueil.php">Home</a>
+			<a href="../Divers/about.php">A Propos</a>
+			<a class="active" href="#" >Se connecter</a>
+			<a href="../Log/Enregistrement.php" >Créer un compte</a>
 		  </div>
     </header>
     <div class="card-header">
         <h4>Login</h4>
     </div>
     <div class="card-body">
-        <form method="POST" action="log.php" class="needs-validation" novalidate="">
+        <form method="POST" action="./log.php" class="needs-validation" novalidate="">
             <div class="form-group">
                 <label for="mail">Email</label>
                 <input id="mail" type="email" class="form-control" name="mail" tabindex="1" required autofocus>
@@ -49,19 +49,10 @@ session_start();
                 </button>
             </div>
         </form>
-        <?php
-        if (isset($_GET["newpwd"])) {
-            if ($_GET["newpwd"] == "passwordupdated") {
-                echo '<p class="signupsucess">Votre mot de passe à été changé!</p>';
-            }
-        }
-
-
-        ?>
 
 
         <div class="mt-5 text-muted text-center">
-            Vous n'avez pas de compte ? <a href="enregistrement.php">En créer un</a>
+            Vous n'avez pas de compte ? <a href="../Log/Enregistrement.php">En créer un</a>
         </div>
 
 </body>
