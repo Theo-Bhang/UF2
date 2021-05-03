@@ -17,7 +17,6 @@
             <ul class="nav_links">
                 <li><a href="../Accueil/accueil.php">Accueil</a></li>
                 <li><a href="#">Classement</a></li>
-                <li><a href="../OTRA/mission.php">Mission</a></li>
                 <li><a href="../Divers/about.php">A propos</a></li>
 				
             </ul>

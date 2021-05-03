@@ -3,7 +3,7 @@ session_start();
 if (!isset($_SESSION) || !isset($_SESSION['mail'])) {
     header('Location: ../Accueil/accueil.php');
     exit();
-}elseif ($_SESSION['role'] == 'admin') {
+}elseif (isset($_SESSION['role']) && $_SESSION['role'] == 'admin') {
     header('Location: ../Accueil/AdminCenter.php');
     exit();
 } 

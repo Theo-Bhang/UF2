@@ -111,36 +111,19 @@ session_start();
 
         echo "    
                     <h4>Attention erreur d'authentification !<br/>Veuillez vérifier votre mot de passe ou votre email</h4>
-                 
-                  <div class='card-body'>
-                    <form method='POST' action='#' class='needs-validation' novalidate=''>
-                      <div class='form-group'>
+                    <form method='POST' action='#' class='formu' novalidate=''>
                         <label for='mail'>Email</label>
                         <input id='mail' type='email' class='form-control' name='mail' tabindex='1' required autofocus>
-                        <div class='invalid-feedback'>
-                            Aucun email soumis
-                        </div>
-                      </div>
-                      <div class='form-group'>
-                        <div class='d-block'>
+                  
+                  
                           <label for='mdp' class='control-label'>Mot de passe :</label>
-                        </div>
+                      
                         <input id='password' type='password' class='form-control' name='mdp' tabindex='2' required>
-                        <div class='invalid-feedback'>
-                          Veuillez renseigner un mot de passe
-                        </div>
-                      </div>
-                      <div class='form-group'>
-                        <button type='submit' class='btn btn-primary btn-lg btn-block' tabindex='4'>
-                          Login
-                        </button>
-                      </div>
+                      
+                        <input type='submit' value='Login' tabindex='4'/>
                     </form>
-                  </div>
-                </div>
-                <div class='mt-5 text-muted text-center'>
                   Vous n'avez pas de compte ? <a href='enregistrement.php'>En créer un</a>
-                </div>
+                
              ";
     }
     ?>

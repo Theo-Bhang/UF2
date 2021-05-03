@@ -22,6 +22,52 @@ body section a img {
     width: 900px;
     height: 400px;
 }
+.formu {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform:translate(-50%, -50%);
+    width: 400px;
+    padding: 40px;
+    background: rgba(0, 0, 0, .8);
+    box-sizing: border-box;
+    box-shadow: 0 15px 25px rgba(0, 0, 0, .5);
+    border-radius: 10px;
+    color: white;
+    text-align: center;
+}
+
+.formu p{
+    color:#fff;
+    text-align: center;
+    font-family: sans-serif;
+}
+
+.formu p a{
+    color:#0088a9;
+}
+
+label{
+    color: white;
+    font-size: 20px;
+    margin: 0px;
+    background-color: rgba(0, 0, 0, .8);
+}
+
+.formu input{
+    margin-bottom: 10px;
+    border-radius: 2px;
+}
+
+.formu img{
+    max-width: 20%;
+    opacity: 0.5;
+    margin-top: 20px;
+}
+
+.formu img:hover{
+    opacity: 1;
+}
 
 body a.lien {
     background: rgba(0, 0, 0, .8);
@@ -122,13 +168,95 @@ button:hover {
 /* Style the search box inside the navigation bar */
 
 body input[type=text] {
-    float: right;
     padding: 6px;
     border: none;
     margin-top: 8px;
     margin-right: 16px;
     font-size: 17px;
 }
+body input[type=password] {
+    padding: 6px;
+    border: none;
+    margin-top: 8px;
+    margin-right: 16px;
+    font-size: 17px;
+}
+.nom, .prenom, .mail, .password{
+    background-repeat: no-repeat;
+    background-position: 2px 2px;
+    padding-left: 27px;
+    background-size: 20px;
+}
+
+.nom, .prenom {
+    background-image: url('../../Img/user.png');
+}
+
+.mail {
+    background-image: url('../../img/email.png');
+}
+
+.password {
+    background-image: url('../../img/password.png');
+}
+
+.formu input[type=submit] {
+    background-color: white;
+    border: 1px solid #0088a9;
+    color: #0088a9;
+    padding: 5px;
+    transition: all 0.5s ease;
+    width: 300px;
+    height: 30px;
+    margin: auto;
+}
+
+.formu input[type=submit]:hover {
+    background-color: #0088a9;
+    color: white;
+    border-radius: 150px;
+    cursor: pointer;
+}
+
+.formu input[type=button] {
+    background-color: white;
+    border: 1px solid #0088a9;
+    color: #0088a9;
+    padding: 5px;
+    transition: all 0.5s ease;
+    width: 300px;
+    height: 30px;
+    margin: auto;
+}
+
+.formu input[type=button]:hover {
+    background-color: #0088a9;
+    color: white;
+    border-radius: 150px;
+    cursor: pointer;
+}
+.formu ::-webkit-input-placeholder { /* WebKit browsers */
+    color:    #0088a9;
+    font-style: italic;
+    text-align: center;
+}
+.formu :-moz-placeholder { /* Mozilla Firefox 4 to 18 */
+   color:    #0088a9;
+   opacity:  1;
+   font-style: italic;
+   text-align: center;
+}
+.formu ::-moz-placeholder { /* Mozilla Firefox 19+ */
+   color:    #0088a9;
+   opacity:  1;
+   font-style: italic;
+   text-align: center;
+}
+.formu :-ms-input-placeholder { /* Internet Explorer 10+ */
+   color:    #0088a9;
+   font-style: italic;
+}
+
 
 
 /* When the screen is less than 600px wide, stack the links and the search field vertically instead of horizontally */

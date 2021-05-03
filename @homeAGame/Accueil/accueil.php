@@ -1,6 +1,6 @@
 <?php
 session_start();
-if (!empty($_SESSION)) {
+if (!empty($_SESSION && isset($_SESSION['role']))) {
     if ($_SESSION['role'] == 'admin') {
 
 		header('Location: ../Accueil/AdminCenter.php');
@@ -9,7 +9,7 @@ if (!empty($_SESSION)) {
 		header('Location: ../Accueil/Accueil_connecté.php');
 		exit();
 	}
-}
+}else{
 
 
 ?>
@@ -38,3 +38,6 @@ if (!empty($_SESSION)) {
 		<a class="lien" href="../OTRA/classement.php"><p> Classement général </p> </a> 
     </body>
 </html> 
+<?php
+}
+?>

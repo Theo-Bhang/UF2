@@ -1,62 +1,37 @@
 <?php
 session_start();
 ?>
-
-<!doctype html>
+<!DOCTYPE html>
 <html>
-
-<head lang="fr">
-    <meta charset="UTF-8">
-    <link rel="stylesheet" href="../Assets/CSS/Profil.css"/>
-    <meta content="width=device-width, initial-scale=1, maximum-scale=1, shrink-to-fit=no" name="viewport">
-    <title>Accueil</title>
-</head>
-
-<body>
-<header>
+    <head>
+        <meta charset="utf-8" />
+        <link rel="stylesheet" type="text/css" href="../Assets/CSS/connect1.css"" />
+        <title>Fomulaire d'inscription</title>
+    </head>
+    <header>
             <img class="logo" src="../Img/LOGO-ON-THE-ROAD.png" alt="logo">
         <nav>
             <ul class="nav_links">
                 <li><a href="../Accueil/accueil.php">Accueil</a></li>
                 <li><a href="../OTRA/classement.php">Classement</a></li>
-                <li><a href="../Divers/about.php">A propos</a></li>
+                <li><a href="../Divers/aboutnc.html">A propos</a></li>
             </ul>
         </nav>
-        <a class="cta" href="#"><button>Se connecter</button></a>
         </header>
-    <div class="card-header">
-        <h4>Login</h4>
-    </div>
-    <div class="card-body">
-        <form method="POST" action="./log.php" class="needs-validation" novalidate="">
-            <div class="form-group">
-                <label for="mail">Email</label>
-                <input id="mail" type="email" class="form-control" name="mail" tabindex="1" required autofocus>
-                <div class="invalid-feedback">
-                    Aucun email soumis
-                </div>
-            </div>
-            <div class="form-group">
-                <div class="d-block">
-                    <label for="mdp" class="control-label">Mot de passe :</label>
-                </div>
-                <input id="password" type="password" class="form-control" name="mdp" tabindex="2" required>
-                <div class="invalid-feedback">
-                    Veuillez renseigner un mot de passe
-                </div>
-            </div>
-            <div class="form-group">
-                <button type="submit" class="btn btn-primary btn-lg btn-block" tabindex="4">
-                    Login
-                </button>
-            </div>
+    <body>
+        <form class="formu" method="POST" action="./log.php" novalidate="">
+            <h2>Connectez vous </h2>
+            <br/>
+            <br/>
+            <label> Email</label>
+            <input type="email" placeholder="Email" name="mail" class="inputbasic mail" />
+            <label> Mot de passe</label>
+            <input type="password" placeholder="Mot de passe" name="mdp" class="inputbasic password" />
+            <br/>
+            <input type="submit" name="connecter" value="Se connecter"/>
+            <p>
+                Vous n'avez pas de compte ? <a href="formulaire.php">Créer un compte</a>
+            </p>
         </form>
-
-
-        <div class="mt-5 text-muted text-center">
-            Vous n'avez pas de compte ? <a href="../Log/Enregistrement.php">En créer un</a>
-        </div>
-
-</body>
-
+    </body>
 </html>
