@@ -27,7 +27,7 @@ if (!isset($_SESSION) || !isset($_SESSION['mail'])) {
         <nav>
             <ul class="nav_links">
                 <li><a href="#">Accueil</a></li>
-				<li><a href="#">Gestion User</a></li>
+				<li><a href="../Gestion/GestionCRUD.php">Gestion User</a></li>
                 <li><a href="../Deco/deco.php">Se déconnecter</a></li>
             </ul>
         </nav>

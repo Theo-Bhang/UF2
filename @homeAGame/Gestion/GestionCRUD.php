@@ -1,13 +1,28 @@
 <?php
     session_start();
     if (!isset($_SESSION) || !isset($_SESSION['mail'])) {
-        header('Location: ../Divers/aboutnc.html');
+        header('Location: ../Accueil/accueil.php');
         exit();
     } 
     if($_SESSION['role'] == 'admin') {
         $db_params = parse_ini_file('../db.ini', true);
         $pdo = new PDO($db_params['db']['url'], $db_params['db']['user'], $db_params['db']['pass']);
-    
+        
+        $db_params = parse_ini_file('../db.ini', true);
+        $pdo = new PDO($db_params['db']['url'], $db_params['db']['user'], $db_params['db']['pass']);
+        if(isset($_POST['i'])){
+            $numb = $_POST['i'];
+        }else{
+            $numb = 1;
+        }
+        
+        $rqt = <<<SQL
+        SELECT nom,prenom,email
+        FROM user
+        SQL;
+        $stmt = $pdo->prepare($rqt);
+        $stmt->execute();
+        $array = $stmt->fetchAll();
     ?>
       
 <!doctype html>
@@ -16,7 +31,7 @@
 <head>
     <meta charset="utf-8" />
     <title>Contact info</title>
-    <link rel="stylesheet" href="../Assets/CSS/About.css">
+    <link rel="stylesheet" href="../Assets/CSS/CRUD.css">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no" />
 </head>
 <header>
@@ -32,21 +47,36 @@
 </header>
 
 <body>
-    <div>
-        <h2>A propos de nous !</h2>
-        <br/>
-        <p>On The Road a game est une entreprise de plus de 7 ans, son activité principale est l’organisation de voyages pour particulier mêlant aventure et jeux. <br/>Le jeu @Home a Game proposera une dizaine de défis permettant à ces joueurs de profiter
-            de l’expérience On The Road A Game. De plus, l’équipe qui remportera cette session se verra se qualifier pour un tirage au sort qui permet de gagner un voyage On The Road A Game. À la fin de ces défis, le vainqueur remportera 1 voyage OTR
-            et les autres participants pourront gagner, selon leur classement, des goodies.</p>
-        <a href="https://www.instagram.com/otragame/" target="_blank"><img src="../img/instagram.png" alt="Instagram"></a>
-        <a href="https://www.facebook.com/otragame/" target="_blank"><img src="../img/facebook.png" alt="Facebook"></a>
-    </div>
+    <form method="post" class="needs-validation">
+      <h4>Nombre de résultats : </h4>
+      <input type="number" name="i"  placeholder="<?php print($numb);?>"/>
+      <button class="btn btn-primary">Changer</button>
+    </form>
+    <?php
+            for($i=0;$i<$numb;$i++)
+            {
+                ?>
+                <div class="div<?php print($i);?>">
+                    <p><?php print_r($array[$i]['email']);  ?></p>
+                    <br>
+                    <p><?php print_r($array[$i]['prenom']);  ?></p>
+                    <br>
+                    <p><?php print_r($array[$i]['nom']);  ?></p>
+                </div>
+                <br>
+                
+                <?php
+            }     
+            
+
+        ?>
+   
 </body>
 
 </html>
     <?php
     }elseif ($_SESSION['role'] == 'user') {
-        header('Location: ../Divers/accueil.php');
+        header('Location: ../Accueil/accueil.php');
         exit();
     }
     ?>
