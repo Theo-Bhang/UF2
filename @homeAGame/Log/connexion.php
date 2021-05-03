@@ -5,7 +5,7 @@ session_start();
 <html>
     <head>
         <meta charset="utf-8" />
-        <link rel="stylesheet" type="text/css" href="../Assets/CSS/connect1.css"" />
+        <link rel="stylesheet" type="text/css" href="../Assets/CSS/connect1.css" />
         <title>Fomulaire d'inscription</title>
     </head>
     <header>

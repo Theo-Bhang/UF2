@@ -173,6 +173,11 @@ label {
     background-image: url('img/tel.png');
 }
 
+.form-control {
+    margin-left: auto;
+    margin-right: auto;
+}
+
 .date:hover {
     color: #0088a9;
 }

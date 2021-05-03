@@ -7,10 +7,20 @@ session_start();
 
 <head>
   <meta charset="UTF-8">
+  <link rel="stylesheet" type="text/css" href="../Assets/CSS/connect1.css"/>
   <meta content="width=device-width, initial-scale=1, maximum-scale=1, shrink-to-fit=no" name="viewport">
   <title>Connexion</title>
 </head>
-
+<header>
+            <img class="logo" src="../Img/LOGO-ON-THE-ROAD.png" alt="logo">
+        <nav>
+            <ul class="nav_links">
+                <li><a href="../Accueil/accueil.php">Accueil</a></li>
+                <li><a href="../OTRA/classement.php">Classement</a></li>
+                <li><a href="../Divers/aboutnc.html">A propos</a></li>
+            </ul>
+        </nav>
+        </header>
 <body>
   <?php
   $db_params = parse_ini_file('../db.ini', true);
@@ -109,18 +119,20 @@ session_start();
 
     echo "    
                     <h4>Attention erreur d'authentification !<br/>Veuillez vérifier votre mot de passe ou votre email</h4>
-                    <form method='POST' action='#' class='formu' novalidate=''>
-                        <label for='mail'>Email</label>
-                        <input id='mail' type='email' class='form-control' name='mail' tabindex='1' required autofocus>
-                  
-                  
-                          <label for='mdp' class='control-label'>Mot de passe :</label>
-                      
-                        <input id='password' type='password' class='form-control' name='mdp' tabindex='2' required>
-                      
-                        <input type='submit' value='Login' tabindex='4'/>
-                    </form>
-                  Vous n'avez pas de compte ? <a href='enregistrement.php'>En créer un</a>
+                    <form class='formu' method='POST' action='./log.php' novalidate=''>
+                    <h2>Connectez vous </h2>
+                    <br/>
+                    <br/>
+                    <label> Email</label>
+                    <input type='email' placeholder='Email' name='mail' class='inputbasic mail' />
+                    <label> Mot de passe</label>
+                    <input type='password' placeholder='Mot de passe' name='mdp' class='inputbasic password' />
+                    <br/>
+                    <input type='submit' name='connecter' value='Se connecter'/>
+                    <p>
+                        Vous n'avez pas de compte ? <a href='formulaire.php'>Créer un compte</a>
+                    </p>
+                </form>
                 
              ";
   }
