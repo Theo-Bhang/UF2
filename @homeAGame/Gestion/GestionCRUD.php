@@ -10,8 +10,10 @@
         
         $db_params = parse_ini_file('../db.ini', true);
         $pdo = new PDO($db_params['db']['url'], $db_params['db']['user'], $db_params['db']['pass']);
-        if(isset($_POST['i'])){
+        if(isset($_POST['i']) && !isset($_POST['numb']) && !isset($numb)){
             $numb = $_POST['i'];
+        }elseif(isset($_POST['numb']) && !isset($numb)){
+            $numb = $_POST['numb'];
         }else{
             $numb = 1;
         }
@@ -23,6 +25,16 @@
         $stmt = $pdo->prepare($rqt);
         $stmt->execute();
         $array = $stmt->fetchAll();
+        
+        
+        $rqt2 = <<<SQL
+        SELECT COUNT(*) AS nb_max
+        FROM user
+        SQL;
+        $stmt2 = $pdo->prepare($rqt2);
+        $stmt2->execute();
+        $array2 = $stmt2->fetchAll();
+        $nbmax = $array2[0]['nb_max'];
     ?>
       
 <!doctype html>
@@ -53,6 +65,10 @@
       <button class="btn btn-primary">Changer</button>
     </form>
     <?php
+   if($numb>$nbmax)
+    {
+        $numb = $nbmax;
+    }
             for($i=0;$i<$numb;$i++)
             {
                 ?>
@@ -62,13 +78,34 @@
                     <p><?php print_r($array[$i]['prenom']);  ?></p>
                     <br>
                     <p><?php print_r($array[$i]['nom']);  ?></p>
+                    <form class='formu' method='POST' action='#'>
+                        
+                        <label for="supmail">Voulez vous supprimer <?php  print_r($array[$i]['nom']);print(" ");print_r($array[$i]['prenom']); ?> ?</label>
+                        <input type="checkbox" name="supmail" />
+                        <input type="hidden" name="mail" value="<?php print($array[$i]['email']);?>"/>
+                        <input type="hidden" name="numb" value="<?php print($numb);?>"/>
+                        <button type='submit'> Supprimer </button>
+                    </form>
                 </div>
                 <br>
                 
                 <?php
             }     
-            
-
+            if(isset($_POST['supmail'])){
+                $supmail = $_POST['supmail'];
+                $mail = $_POST['mail'];
+                if(isset($supmail)){
+                    $rqt = <<<SQL
+                    DELETE
+                    FROM user
+                    WHERE email = :mail
+                    SQL;
+                    $stmt = $pdo->prepare($rqt);
+                    $stmt->execute(['mail' => $mail]);
+                    $array = $stmt->fetchAll();
+                    print("Utilisateur supprimé !");
+                }
+            }
         ?>
    
 </body>
