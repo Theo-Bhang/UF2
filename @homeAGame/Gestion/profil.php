@@ -23,7 +23,7 @@ if (!isset($_SESSION) || !isset($_SESSION['mail'])) {
       <nav>
         <ul class="nav_links">
           <li><a href="../Accueil/AdminCenter.php">Accueil</a></li>
-          <li><a href="../Divers/about.php">Gestion User</a></li>
+          <li><a href="../Gestion/GestionCRUD.php">Gestion User</a></li>
           <li><a href="../Deco/deco.php">Se déconnecter</a></li>
         </ul>
       </nav>

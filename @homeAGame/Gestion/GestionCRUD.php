@@ -83,7 +83,7 @@
                         <label for="supmail">Voulez vous supprimer <?php  print_r($array[$i]['nom']);print(" ");print_r($array[$i]['prenom']); ?> ?</label>
                         <input type="checkbox" name="supmail" />
                         <input type="hidden" name="mail" value="<?php print($array[$i]['email']);?>"/>
-                        <input type="hidden" name="numb" value="<?php print($numb);?>"/>
+                        <input type="hidden" name="numb" value="<?php print($numb-1);?>"/>
                         <button type='submit'> Supprimer </button>
                     </form>
                 </div>

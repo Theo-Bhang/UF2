@@ -29,7 +29,58 @@ body section a img {
     transform:translate(-50%, -50%);
     width: 400px;
     padding: 40px;
-    background: rgba(0, 0, 0, .8);
+    background: rgba(0, 0, 0, 0.8);
+    box-sizing: border-box;
+    box-shadow: 0 15px 25px rgba(0, 0, 0, .5);
+    border-radius: 10px;
+    color: white;
+    text-align: center;
+}
+.modif h4 {
+    color: white;
+    font-size: 20px;
+    margin: 0px;
+    text-align: center;
+    background-color: rgba(0, 0, 0, .8);
+}
+.modif1 {
+    position: absolute;
+    top: 30%;
+    left: 50%;
+    transform:translate(-50%, -50%);
+    width: 400px;
+    padding: 40px;
+    background: rgba(0, 0, 0, 0.8);
+    box-sizing: border-box;
+    box-shadow: 0 15px 25px rgba(0, 0, 0, .5);
+    border-radius: 10px;
+    color: white;
+    text-align: center;
+}
+
+.modif2 {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform:translate(-50%, -50%);
+    width: 400px;
+    padding: 40px;
+    background: rgba(0, 0, 0, 0.8);
+    box-sizing: border-box;
+    box-shadow: 0 15px 25px rgba(0, 0, 0, .5);
+    border-radius: 10px;
+    color: white;
+    text-align: center;
+}
+
+.modif3 {
+    position: absolute;
+    top: 70%;
+    left: 50%;
+    transform:translate(-50%, -50%);
+    width: 400px;
+    padding: 40px;
+    background: rgba(0, 0, 0, 0.8);
     box-sizing: border-box;
     box-shadow: 0 15px 25px rgba(0, 0, 0, .5);
     border-radius: 10px;
@@ -253,6 +304,63 @@ body input[type=password] {
    text-align: center;
 }
 .formu :-ms-input-placeholder { /* Internet Explorer 10+ */
+   color:    #0088a9;
+   font-style: italic;
+}
+
+.modif input[type=submit] {
+    background-color: white;
+    border: 1px solid #0088a9;
+    color: #0088a9;
+    padding: 5px;
+    transition: all 0.5s ease;
+    width: 300px;
+    height: 30px;
+    margin: auto;
+}
+
+.modif input[type=submit]:hover {
+    background-color: #0088a9;
+    color: white;
+    border-radius: 150px;
+    cursor: pointer;
+}
+
+.modif input[type=button] {
+    background-color: white;
+    border: 1px solid #0088a9;
+    color: #0088a9;
+    padding: 5px;
+    transition: all 0.5s ease;
+    width: 300px;
+    height: 30px;
+    margin: auto;
+}
+
+.modif input[type=button]:hover {
+    background-color: #0088a9;
+    color: white;
+    border-radius: 150px;
+    cursor: pointer;
+}
+.modif ::-webkit-input-placeholder { /* WebKit browsers */
+    color:    #0088a9;
+    font-style: italic;
+    text-align: center;
+}
+.modif :-moz-placeholder { /* Mozilla Firefox 4 to 18 */
+   color:    #0088a9;
+   opacity:  1;
+   font-style: italic;
+   text-align: center;
+}
+.modif ::-moz-placeholder { /* Mozilla Firefox 19+ */
+   color:    #0088a9;
+   opacity:  1;
+   font-style: italic;
+   text-align: center;
+}
+.modif :-ms-input-placeholder { /* Internet Explorer 10+ */
    color:    #0088a9;
    font-style: italic;
 }

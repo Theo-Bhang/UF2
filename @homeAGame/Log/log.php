@@ -12,7 +12,7 @@ session_start();
   <title>Connexion</title>
 </head>
 <header>
-            <img class="logo" src="../Img/LOGO-ON-THE-ROAD.png" alt="logo">
+        <img class="logo" src="../Img/LOGO-ON-THE-ROAD.png" alt="logo">
         <nav>
             <ul class="nav_links">
                 <li><a href="../Accueil/accueil.php">Accueil</a></li>
