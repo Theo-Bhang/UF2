@@ -63,6 +63,7 @@
     <nav>
         <ul class="nav_links">
             <li><a href="../Accueil/Accueil_connecté.php">Accueil</a></li>
+            <li><a href="../OTRA/classement.php">Classement</a></li>
             <li><a href="../OTRA/mission.php">Missions</a></li>
             <li><a href="#">A propos</a></li>
             <li><a href="../Deco/deco.php">Se déconnecter</a></li>

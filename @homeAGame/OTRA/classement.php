@@ -25,21 +25,44 @@
         </header>
 
         <body>
-        <br/>
-		<br/>
-        <a class="lien">
-            <p> 
-                <ul>
-                    <li> 1er : </li>
-                    <li> 2eme : </li>
-                    <li> 3eme : </li>
-                    <li> 4eme : </li>
-                    <li> 5eme : </li>
-                    <li> XXX : </li>
-                </ul>
-            </p> 
-        </a>
+        <?php 
+            $db_params = parse_ini_file('../db.ini', true);
+            $pdo = new PDO($db_params['db']['url'], $db_params['db']['user'], $db_params['db']['pass']);
 
+            $rqt = <<<SQL
+                        SELECT nom,prenom,c.score
+                        FROM user
+                        INNER JOIN Classement AS c ON c.id = user.id
+                        ORDER BY c.score DESC
+                        SQL;
+            $stmt = $pdo->prepare($rqt);
+            $stmt->execute();
+            $array = $stmt->fetchAll();
+
+            $rqt2 = <<<SQL
+            SELECT COUNT(*) AS nb_max
+            FROM classement
+            SQL;
+            $stmt2 = $pdo->prepare($rqt2);
+            $stmt2->execute();
+            $array2 = $stmt2->fetchAll();
+            $nbmax = $array2[0]['nb_max'];
+        ?>
+        
+        <div class="class">
+            <div>
+        <?php
+            for($i=0;$i<$nbmax;$i++)
+            {
+                ?>
+               <p class="<?php  print($i+1);?>"> <?php print($i+1);print(" -- "); print_r($array[$i]['nom']);print_r(" ");print_r($array[$i]['prenom']);print_r(" : ");?></p>
+               <p class="score"> <?php print_r($array[$i]['score']); ?></p>
+                <?php 
+            }
+                ?>
+                </div>
+        </div>
+     
     </body>
 </html>
 <?php
@@ -74,21 +97,44 @@
         </header>
 
         <body>
-        <br/>
-		<br/>
-        <a class="lien">
-            <p> 
-                <ul>
-                    <li> 1er : </li>
-                    <li> 2eme : </li>
-                    <li> 3eme : </li>
-                    <li> 4eme : </li>
-                    <li> 5eme : </li>
-                    <li> XXX : </li>
-                </ul>
-            </p> 
-        </a>
+        <?php 
+            $db_params = parse_ini_file('../db.ini', true);
+            $pdo = new PDO($db_params['db']['url'], $db_params['db']['user'], $db_params['db']['pass']);
 
+            $rqt = <<<SQL
+                        SELECT nom,prenom,c.score
+                        FROM user
+                        INNER JOIN Classement AS c ON c.id = user.id
+                        ORDER BY c.score DESC
+                        SQL;
+            $stmt = $pdo->prepare($rqt);
+            $stmt->execute();
+            $array = $stmt->fetchAll();
+
+            $rqt2 = <<<SQL
+            SELECT COUNT(*) AS nb_max
+            FROM classement
+            SQL;
+            $stmt2 = $pdo->prepare($rqt2);
+            $stmt2->execute();
+            $array2 = $stmt2->fetchAll();
+            $nbmax = $array2[0]['nb_max'];
+        ?>
+        
+        <div class="class">
+            <div>
+        <?php
+            for($i=0;$i<$nbmax;$i++)
+            {
+                ?>
+               <p class="<?php  print($i+1);?>"> <?php print($i+1);print(" -- "); print_r($array[$i]['nom']);print_r(" ");print_r($array[$i]['prenom']);print_r(" : ");?></p>
+               <p class="score"> <?php print_r($array[$i]['score']); ?></p>
+                <?php 
+            }
+                ?>
+                </div>
+        </div>
+     
     </body>
 </html>
     <?php
