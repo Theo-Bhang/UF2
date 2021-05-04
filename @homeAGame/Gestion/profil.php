@@ -228,7 +228,6 @@ if (empty($array)) {
 }
     ?>
 
-    <h2 class="clearfix">Mail</h2>
     <p> <?php echo $_SESSION['mail'] ?></p>
     <div class= "modif">
     <form class= "modif1" method="post" class="needs-validation">
