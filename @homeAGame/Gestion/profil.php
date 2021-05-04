@@ -103,25 +103,23 @@ if (!isset($_SESSION) || !isset($_SESSION['mail'])) {
 
     <h2 class="clearfix">Mail</h2>
     <p> <?php echo $_SESSION['mail'] ?></p>
-
-    <form method="post" class="needs-validation">
+    <div class= "modif">
+    <form class= "modif1" method="post" class="needs-validation">
       <h4>Changer Prénom</h4>
-      <label>Prénom</label>
       <input type="text" class="form-control" name="prenom" placeholder='<?php echo $_SESSION['prenom'] ?>' />
       <button class="btn btn-primary">Changer</button>
     </form>
-    <form method="post" class="needs-validation">
+    <form class= "modif2" method="post" class="needs-validation">
       <h4>Changer Nom</h4>
-      <label>Nom</label>
       <input type="text" class="form-control" name="nom" placeholder='<?php echo $_SESSION['nom'] ?>' />
       <button class="btn btn-primary">Changer</button>
     </form>
-    <form method="post" class="needs-validation">
-      <h4>Changer Mdp</h4>
-      <label>Mdp</label>
+    <form class= "modif3" method="post" class="needs-validation">
+      <h4>Changer Mot de passe</h4>
       <input type="password" class="form-control" name="mdp" />
       <button class="btn btn-primary">Changer</button>
     </form>
+  </div>
 
   </body>
 
@@ -232,25 +230,23 @@ if (empty($array)) {
 
     <h2 class="clearfix">Mail</h2>
     <p> <?php echo $_SESSION['mail'] ?></p>
-
-    <form method="post" class="needs-validation">
+    <div class= "modif">
+    <form class= "modif1" method="post" class="needs-validation">
       <h4>Changer Prénom</h4>
-      <label>Prénom</label>
       <input type="text" class="form-control" name="prenom" placeholder='<?php echo $_SESSION['prenom'] ?>' />
       <button class="btn btn-primary">Changer</button>
     </form>
-    <form method="post" class="needs-validation">
+    <form class= "modif2" method="post" class="needs-validation">
       <h4>Changer Nom</h4>
-      <label>Nom</label>
       <input type="text" class="form-control" name="nom" placeholder='<?php echo $_SESSION['nom'] ?>' />
       <button class="btn btn-primary">Changer</button>
     </form>
-    <form method="post" class="needs-validation">
+    <form class= "modif3" method="post" class="needs-validation">
       <h4>Changer Mdp</h4>
-      <label>Mdp</label>
       <input type="password" class="form-control" name="mdp" />
       <button class="btn btn-primary">Changer</button>
     </form>
+  </div>
   </body>
 
   </html>
