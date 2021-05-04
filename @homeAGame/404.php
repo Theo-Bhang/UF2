@@ -25,7 +25,7 @@
   </div>
            
   <div>
-    <a href="./Accueil/accueil.php">Retour à la page d'accueil</a>
+    <a class="acc" href="./Accueil/accueil.php">Retour à la page d'accueil</a>
   </div>
         
   </div>

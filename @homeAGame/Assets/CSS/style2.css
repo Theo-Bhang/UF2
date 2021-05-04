@@ -1,10 +1,9 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@500&display=swap');
-
 body {
     background-image: url('img/fondconn5.jpg');
     background-size: cover;
     font-family: 'Trebuchet MS', Arial, Helvetica, sans-serif;
-    background-color:#24252A;
+    background-color: #24252A;
 }
 
 section {
@@ -15,6 +14,12 @@ body section a img {
     margin: 100px auto;
     width: 900px;
     height: 400px;
+}
+
+h1 {
+    font-size: 200px;
+    text-align: center;
+    color: #FFF;
 }
 
 body a.lien {
@@ -37,6 +42,27 @@ body a.lien:hover {
     color: #2196F3;
 }
 
+body a.acc {
+    background: rgba(0, 0, 0, .8);
+    box-sizing: border-box;
+    box-shadow: 0 15px 25px rgba(0, 0, 0, .5);
+    border-radius: 10px;
+    position: relative;
+    margin-left: auto;
+    margin-right: auto;
+    height: 50px;
+    width: 300px;
+    vertical-align: middle;
+    border-radius: 10px;
+    color: white;
+    border: 1px solid #2196F3;
+    top: 100px;
+}
+
+body a.acc:hover {
+    color: #2196F3;
+}
+
 body a.lien p {
     position: relative;
     top: 115px;
@@ -47,7 +73,8 @@ body a.lien p {
 
 body p {
     text-align: center;
-    font-size: 18px;
+    font-size: 24px;
+    color: #FFF;
 }
 
 body a {
@@ -61,7 +88,9 @@ body a {
     background-color: #24252A;
 }
 
-li, a, button {
+li,
+a,
+button {
     font-family: "Montserrat", sans-serif;
     font-weight: 500;
     font-size: 16px;
@@ -102,7 +131,7 @@ header {
 
 button {
     padding: 9px 25px;
-    background-color: rgba(0,136,169,1);
+    background-color: rgba(0, 136, 169, 1);
     border: none;
     border-radius: 50px;
     cursor: pointer;
@@ -110,8 +139,9 @@ button {
 }
 
 button:hover {
-    background-color: rgba(0,136,169,0.8);
+    background-color: rgba(0, 136, 169, 0.8);
 }
+
 
 /* Style the search box inside the navigation bar */
 
