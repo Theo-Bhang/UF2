@@ -1,24 +1,24 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@500&display=swap');
-
-body{
+body {
     font-family: sans-serif;
     background-image: url('img/fondconn5.jpg');
     background-size: cover;
     color: white;
 }
 
-body p, a{
-    background-color: rgba(0, 0, 0, .8);
+body p,
+a {
+    background-color: #000;
 }
 
 .formu {
     position: absolute;
     top: 50%;
     left: 50%;
-    transform:translate(-50%, -50%);
+    transform: translate(-50%, -50%);
     width: 400px;
     padding: 40px;
-    background: rgba(0, 0, 0, .8);
+    background: #000;
     box-sizing: border-box;
     box-shadow: 0 15px 25px rgba(0, 0, 0, .5);
     border-radius: 10px;
@@ -26,25 +26,25 @@ body p, a{
     text-align: center;
 }
 
-.formu input{
+.formu input {
     display: block;
     margin-bottom: 10px;
     border-radius: 2px;
 }
-.c1{
+
+.c1 {
     text-align: left;
     color: #0088a9;
 }
 
-.formu img{
+.formu img {
     max-width: 20%;
     opacity: 0.5;
 }
 
-.formu img:hover{
+.formu img:hover {
     opacity: 1;
 }
-
 
 * {
     box-sizing: border-box;
@@ -53,7 +53,9 @@ body p, a{
     background-color: #24252A;
 }
 
-li, a, button {
+li,
+a,
+button {
     font-family: "Montserrat", sans-serif;
     font-weight: 500;
     font-size: 16px;
@@ -95,7 +97,7 @@ header {
 
 button {
     padding: 9px 25px;
-    background-color: rgba(0,136,169,1);
+    background-color: rgba(0, 136, 169, 1);
     border: none;
     border-radius: 50px;
     cursor: pointer;
@@ -103,7 +105,7 @@ button {
 }
 
 button:hover {
-    background-color: rgba(0,136,169,0.8);
+    background-color: rgba(0, 136, 169, 0.8);
 }
 
 .inputbasic {
@@ -114,19 +116,19 @@ button:hover {
     margin: auto;
 }
 
-.inputbasic:focus{
+.inputbasic:focus {
     color: #0088a9;
     border-color: #0088a9;
 }
 
-label{
+label {
     color: white;
     font-size: 20px;
     margin: 0px;
     background-color: rgba(0, 0, 0, .8);
 }
 
-.formu h2{
+.formu h2 {
     color: white;
     font-size: 20px;
     margin: 0px;
@@ -134,14 +136,19 @@ label{
     background-color: rgba(0, 0, 0, .8);
 }
 
-.nom, .prenom, .mail, .password, .numero {
+.nom,
+.prenom,
+.mail,
+.password,
+.numero {
     background-repeat: no-repeat;
     background-position: 2px 2px;
     padding-left: 27px;
     background-size: 20px;
 }
 
-.nom, .prenom {
+.nom,
+.prenom {
     background-image: url('img/user.png');
 }
 
@@ -149,7 +156,8 @@ label{
     background-image: url('img/email.png');
 }
 
-.password, .password-confirm {
+.password,
+.password-confirm {
     background-image: url('img/password.png');
 }
 
@@ -178,7 +186,7 @@ label{
 .genre {
     color: #0088a9;
     margin-bottom: 10px;
-    font-style: italic  ;
+    font-style: italic;
 }
 
 .genre:focus {
@@ -222,31 +230,38 @@ label{
     cursor: pointer;
 }
 
-.formu p{
-    color:#fff;
+.formu p {
+    color: #fff;
     text-align: center;
     font-family: sans-serif;
 }
 
-.formu p a{
-    color:#0088a9;
+.formu p a {
+    color: #0088a9;
 }
 
-.formu ::-webkit-input-placeholder { /* WebKit browsers */
-    color:    #0088a9;
+.formu ::-webkit-input-placeholder {
+    /* WebKit browsers */
+    color: #0088a9;
     font-style: italic;
 }
-.formu :-moz-placeholder { /* Mozilla Firefox 4 to 18 */
-   color:    #0088a9;
-   opacity:  1;
-   font-style: italic;
+
+.formu :-moz-placeholder {
+    /* Mozilla Firefox 4 to 18 */
+    color: #0088a9;
+    opacity: 1;
+    font-style: italic;
 }
-.formu ::-moz-placeholder { /* Mozilla Firefox 19+ */
-   color:    #0088a9;
-   opacity:  1;
-   font-style: italic;
+
+.formu ::-moz-placeholder {
+    /* Mozilla Firefox 19+ */
+    color: #0088a9;
+    opacity: 1;
+    font-style: italic;
 }
-.formu :-ms-input-placeholder { /* Internet Explorer 10+ */
-   color:    #0088a9;
-   font-style: italic;
+
+.formu :-ms-input-placeholder {
+    /* Internet Explorer 10+ */
+    color: #0088a9;
+    font-style: italic;
 }
