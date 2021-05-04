@@ -241,7 +241,7 @@ if (empty($array)) {
       <button class="btn btn-primary">Changer</button>
     </form>
     <form class= "modif3" method="post" class="needs-validation">
-      <h4>Changer Mdp</h4>
+      <h4>Changer Mot de passe</h4>
       <input type="password" class="form-control" name="mdp" />
       <button class="btn btn-primary">Changer</button>
     </form>
