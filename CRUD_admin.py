@@ -80,6 +80,9 @@ def supUser():
 
 
 def updateDb():
+    global nom , prenom 
+    afficheNom = nom.get()
+    affichePrenom = prenom.get()
     # Connectez- vous à la base de données.
     connection = pymysql.connect(host='localhost',
                              user='root',
