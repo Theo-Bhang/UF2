@@ -103,23 +103,23 @@ if (!isset($_SESSION) || !isset($_SESSION['mail'])) {
 
     <h2 class="clearfix">Mail</h2>
     <p> <?php echo $_SESSION['mail'] ?></p>
-    <div class= "modif">
-    <form class= "modif1" method="post" class="needs-validation">
-      <h4>Changer Prénom</h4>
-      <input type="text" class="form-control" name="prenom" placeholder='<?php echo $_SESSION['prenom'] ?>' />
-      <button class="btn btn-primary">Changer</button>
-    </form>
-    <form class= "modif2" method="post" class="needs-validation">
-      <h4>Changer Nom</h4>
-      <input type="text" class="form-control" name="nom" placeholder='<?php echo $_SESSION['nom'] ?>' />
-      <button class="btn btn-primary">Changer</button>
-    </form>
-    <form class= "modif3" method="post" class="needs-validation">
-      <h4>Changer Mot de passe</h4>
-      <input type="password" class="form-control" name="mdp" />
-      <button class="btn btn-primary">Changer</button>
-    </form>
-  </div>
+    <div class="modif">
+      <form class="modif1" method="post" class="needs-validation">
+        <h4>Changer Prénom</h4>
+        <input type="text" class="form-control" name="prenom" placeholder='<?php echo $_SESSION['prenom'] ?>' />
+        <button class="btn btn-primary">Changer</button>
+      </form>
+      <form class="modif2" method="post" class="needs-validation">
+        <h4>Changer Nom</h4>
+        <input type="text" class="form-control" name="nom" placeholder='<?php echo $_SESSION['nom'] ?>' />
+        <button class="btn btn-primary">Changer</button>
+      </form>
+      <form class="modif3" method="post" class="needs-validation">
+        <h4>Changer Mot de passe</h4>
+        <input type="password" class="form-control" name="mdp" />
+        <button class="btn btn-primary">Changer</button>
+      </form>
+    </div>
 
   </body>
 
@@ -158,95 +158,95 @@ if (!isset($_SESSION) || !isset($_SESSION['mail'])) {
 
     <?php
 
-$db_params = parse_ini_file('../db.ini', true);
-$pdo = new PDO($db_params['db']['url'], $db_params['db']['user'], $db_params['db']['pass']);
+    $db_params = parse_ini_file('../db.ini', true);
+    $pdo = new PDO($db_params['db']['url'], $db_params['db']['user'], $db_params['db']['pass']);
 
-$mail = $_SESSION['mail'];
-$rqt = <<<SQL
+    $mail = $_SESSION['mail'];
+    $rqt = <<<SQL
             SELECT id
             FROM user
             WHERE email = :mail
             SQL;
-$stmt = $pdo->prepare($rqt);
-$stmt->execute(['mail' => $mail]);
-$array = $stmt->fetchAll();
-if (empty($array)) {
-  $rqt = <<<SQL
+    $stmt = $pdo->prepare($rqt);
+    $stmt->execute(['mail' => $mail]);
+    $array = $stmt->fetchAll();
+    if (empty($array)) {
+      $rqt = <<<SQL
     SELECT idAdmin
     FROM `admin`
     WHERE email = :mail
   SQL;
-  $stmt = $pdo->prepare($rqt);
-  $stmt->execute(['mail' => $mail]);
-  $array = $stmt->fetchAll();
-  $id = $array[0]['idAdmin'];
+      $stmt = $pdo->prepare($rqt);
+      $stmt->execute(['mail' => $mail]);
+      $array = $stmt->fetchAll();
+      $id = $array[0]['idAdmin'];
 
 
-  if (isset($_POST['nom'])) {
-    $change = $_POST['nom'];
+      if (isset($_POST['nom'])) {
+        $change = $_POST['nom'];
 
-    $sql = "UPDATE `admin` SET `nom`=? WHERE idAdmin=?";
-    $pdo->prepare($sql)->execute([$change, $id]);
-    $_SESSION['nom'] = $change;
-  }
-  if (isset($_POST['prenom'])) {
-    $change = $_POST['prenom'];
+        $sql = "UPDATE `admin` SET `nom`=? WHERE idAdmin=?";
+        $pdo->prepare($sql)->execute([$change, $id]);
+        $_SESSION['nom'] = $change;
+      }
+      if (isset($_POST['prenom'])) {
+        $change = $_POST['prenom'];
 
-    $sql = "UPDATE `admin` SET `prenom`=? WHERE idAdmin=?";
-    $pdo->prepare($sql)->execute([$change, $id]);
-    $_SESSION['prenom'] = $change;
-  }
-  if (isset($_POST['mdp'])) {
-    $change = $_POST['mdp'];
-    $hash = password_hash($change, PASSWORD_BCRYPT);
-    $sql = "UPDATE `admin` SET `mdp`=? WHERE idAdmin=?";
-    $pdo->prepare($sql)->execute([$hash, $id]);
-  }
-} elseif (!empty($array)) {
-  $id = $array[0]['id'];
+        $sql = "UPDATE `admin` SET `prenom`=? WHERE idAdmin=?";
+        $pdo->prepare($sql)->execute([$change, $id]);
+        $_SESSION['prenom'] = $change;
+      }
+      if (isset($_POST['mdp'])) {
+        $change = $_POST['mdp'];
+        $hash = password_hash($change, PASSWORD_BCRYPT);
+        $sql = "UPDATE `admin` SET `mdp`=? WHERE idAdmin=?";
+        $pdo->prepare($sql)->execute([$hash, $id]);
+      }
+    } elseif (!empty($array)) {
+      $id = $array[0]['id'];
 
 
-  if (isset($_POST['nom'])) {
-    $change = $_POST['nom'];
+      if (isset($_POST['nom'])) {
+        $change = $_POST['nom'];
 
-    $sql = "UPDATE `user` SET `nom`=? WHERE id=?";
-    $pdo->prepare($sql)->execute([$change, $id]);
-    $_SESSION['nom'] = $change;
-  }
-  if (isset($_POST['prenom'])) {
-    $change = $_POST['prenom'];
+        $sql = "UPDATE `user` SET `nom`=? WHERE id=?";
+        $pdo->prepare($sql)->execute([$change, $id]);
+        $_SESSION['nom'] = $change;
+      }
+      if (isset($_POST['prenom'])) {
+        $change = $_POST['prenom'];
 
-    $sql = "UPDATE `user` SET `prenom`=? WHERE id=?";
-    $pdo->prepare($sql)->execute([$change, $id]);
-    $_SESSION['prenom'] = $change;
-  }
-  if (isset($_POST['mdp'])) {
-    $change = $_POST['mdp'];
-    $hash = password_hash($change, PASSWORD_BCRYPT);
-    $sql = "UPDATE `user` SET `mdp`=? WHERE id=?";
-    $pdo->prepare($sql)->execute([$hash, $id]);
-  }
-}
+        $sql = "UPDATE `user` SET `prenom`=? WHERE id=?";
+        $pdo->prepare($sql)->execute([$change, $id]);
+        $_SESSION['prenom'] = $change;
+      }
+      if (isset($_POST['mdp'])) {
+        $change = $_POST['mdp'];
+        $hash = password_hash($change, PASSWORD_BCRYPT);
+        $sql = "UPDATE `user` SET `mdp`=? WHERE id=?";
+        $pdo->prepare($sql)->execute([$hash, $id]);
+      }
+    }
     ?>
 
     <p> <?php echo $_SESSION['mail'] ?></p>
-    <div class= "modif">
-    <form class= "modif1" method="post" class="needs-validation">
-      <h4>Changer Prénom</h4>
-      <input type="text" class="form-control" name="prenom" placeholder='<?php echo $_SESSION['prenom'] ?>' />
-      <button class="btn btn-primary">Changer</button>
-    </form>
-    <form class= "modif2" method="post" class="needs-validation">
-      <h4>Changer Nom</h4>
-      <input type="text" class="form-control" name="nom" placeholder='<?php echo $_SESSION['nom'] ?>' />
-      <button class="btn btn-primary">Changer</button>
-    </form>
-    <form class= "modif3" method="post" class="needs-validation">
-      <h4>Changer Mot de passe</h4>
-      <input type="password" class="form-control" name="mdp" />
-      <button class="btn btn-primary">Changer</button>
-    </form>
-  </div>
+    <div class="modif">
+      <form class="modif1" method="post" class="needs-validation">
+        <h4>Changer Prénom</h4>
+        <input type="text" class="form-control" name="prenom" placeholder='<?php echo $_SESSION['prenom'] ?>' />
+        <button class="btn btn-primary">Changer</button>
+      </form>
+      <form class="modif2" method="post" class="needs-validation">
+        <h4>Changer Nom</h4>
+        <input type="text" class="form-control" name="nom" placeholder='<?php echo $_SESSION['nom'] ?>' />
+        <button class="btn btn-primary">Changer</button>
+      </form>
+      <form class="modif3" method="post" class="needs-validation">
+        <h4>Changer Mot de passe</h4>
+        <input type="password" class="form-control" name="mdp" />
+        <button class="btn btn-primary">Changer</button>
+      </form>
+    </div>
   </body>
 
   </html>

@@ -83,7 +83,7 @@ session_start();
 
     $mail = $_POST['mail'];
     $rqtprenom = <<<SQL
-            SELECT prenom,nom,role
+            SELECT id,prenom,nom,role
             FROM user
             WHERE email = :mail
         SQL;
@@ -101,9 +101,9 @@ session_start();
       $array = $stmtprenom->fetchAll();
     }
 
-
     $user = "{$array[0]['nom']} {$array[0]['prenom']}";
     $_SESSION['username'] = $user;
+    $_SESSION['id'] = $array[0]['id'];
     $_SESSION['nom'] = $array[0]['nom'];
     $_SESSION['prenom'] = $array[0]['prenom'];
     $_SESSION['mail'] = $mail;

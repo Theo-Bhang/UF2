@@ -1,225 +1,301 @@
-    @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@500&display=swap');
-    body {
-        background-image: url('img/Volcano.jpg');
-        background-size: cover;
-        font-family: 'Trebuchet MS', Arial, Helvetica, sans-serif;
-        background-color: #24252A;
-    }
-    
-    section {
-        display: flex;
-    }
-    
-    body section a img {
-        margin: 100px auto;
-        width: 900px;
-        height: 400px;
-    }
-    
-    body div.class {
-        background: rgba(0, 0, 0, .8);
-        box-sizing: border-box;
-        box-shadow: 0 15px 25px rgba(0, 0, 0, .5);
-        border-radius: 10px;
-        position: relative;
-        margin-left: auto;
-        margin-right: auto;
-        height: auto;
-        width: 600px;
-        vertical-align: middle;
-        border-radius: 10px;
-        color: white;
-        border: 1px solid #2196F3;
-    }
-    
-    body div.class div {
-        margin-top: 5%;
-        background-color: #070708;
-        border-radius: 10px;
-    }
-    
-    body div.class p {
-        position: relative;
-        text-align: left;
-        margin: 0 0 0 10%;
-        font-size: 18px;
-        width: 50%;
-        color: white;
-        background-color: #070708;
-    }
-    
-    body div.class p.score {
-        position: relative;
-        text-align: right;
-        top: -22px;
-        margin: 0 0 0 80%;
-        font-size: 18px;
-        width: 10%;
-        color: white;
-        background-color: #070708;
-    }
-    
-    body a.lien {
-        background: rgba(0, 0, 0, .8);
-        box-sizing: border-box;
-        box-shadow: 0 15px 25px rgba(0, 0, 0, .5);
-        border-radius: 10px;
-        position: relative;
-        margin-left: auto;
-        margin-right: auto;
-        height: 300px;
-        width: 600px;
-        vertical-align: middle;
-        border-radius: 10px;
-        color: white;
-        border: 1px solid #2196F3;
-    }
-    
-    body a.lien:hover {
-        color: #2196F3;
-    }
-    
-    body a.lien div {
-        flex-wrap: nowrap;
-        margin-top: 7%;
-        background-color: #070708;
-    }
-    
-    body a.lien p {
-        position: relative;
-        text-align: left;
-        margin: 0 0 0 10%;
-        font-size: 18px;
-        width: 50%;
-        color: white;
-        background-color: #070708;
-    }
-    
-    body a.lien p.score {
-        position: relative;
-        text-align: right;
-        top: -22px;
-        margin: 0 0 0 80%;
-        font-size: 18px;
-        width: 10%;
-        color: white;
-        background-color: #070708;
-    }
-    
-    body p {
-        text-align: center;
-        font-size: 18px;
-        color: white;
-    }
-    
-    body a {
-        color: white;
-    }
-    
-    * {
-        box-sizing: border-box;
-        margin: 0;
-        padding: 0;
-        background-color: #24252A;
-    }
-    
-    li,
-    a,
-    button {
-        font-family: "Montserrat", sans-serif;
-        font-weight: 500;
-        font-size: 16px;
-        color: #edf0f1;
-        text-decoration: none;
-    }
-    
-    header {
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-        padding: 30px 10%;
-    }
-    
-    .logo {
-        cursor: pointer;
-        width: 150px;
-        height: 70px;
-    }
-    
-    .nav_links {
-        list-style: none;
-    }
-    
-    .nav_links li {
-        display: inline-block;
-        padding: 0px 20px;
-    }
-    
-    .nav_links li a {
-        transition: all 0.3s ease 0s;
-        color: white
-    }
-    
-    .nav_links li a:hover {
-        color: #0088a9;
-    }
-    
-    button {
-        padding: 9px 25px;
-        background-color: rgba(0, 136, 169, 1);
-        border: none;
-        border-radius: 50px;
-        cursor: pointer;
-        transition: all 0.3s ease 0s;
-    }
-    
-    button:hover {
-        background-color: rgba(0, 136, 169, 0.8);
-    }
-    /* Style the search box inside the navigation bar */
-    
-    body input[type=text] {
-        float: right;
-        padding: 6px;
-        border: none;
-        margin-top: 8px;
-        margin-right: 16px;
-        font-size: 17px;
-    }
-    /* When the screen is less than 600px wide, stack the links and the search field vertically instead of horizontally */
-    
-    @media screen and (max-width: 600px) {
-        .topnav a,
-        .topnav input[type=text] {
-            float: none;
-            display: block;
-            text-align: left;
-            width: 100%;
-            margin: 0;
-            padding: 14px;
-        }
-        .topnav input[type=text] {
-            border: 1px solid #ccc;
-        }
-    }
-    
-    body a {
-        float: center;
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@500&display=swap');
+
+/* BODY */
+
+body {
+    background-image: url('img/Volcano.jpg');
+    background-size: cover;
+    font-family: 'Trebuchet MS', Arial, Helvetica, sans-serif;
+    background-color: #24252A;
+}
+
+section {
+    display: flex;
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    background-color: #24252A;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 30px 10%;
+}
+
+.logo {
+    cursor: pointer;
+    width: 150px;
+    height: 70px;
+}
+
+.nav_links {
+    list-style: none;
+}
+
+.nav_links li {
+    display: inline-block;
+    padding: 0px 20px;
+}
+
+
+/* IMG */
+
+body section a img {
+    margin: 100px auto;
+    width: 900px;
+    height: 400px;
+}
+
+body div.class img.num1 {
+    position: absolute;
+    height: 6%;
+    width: 5.5%;
+    background-color: black;
+    margin-left: 2.3%;
+    top: 23px;
+    z-index: 1;
+}
+
+body div.class img.num2 {
+    position: absolute;
+    margin-left: 2.8%;
+    height: 5%;
+    width: 4%;
+    background-color: black;
+    top: 72px;
+    z-index: 2;
+}
+
+body div.class img.num3 {
+    position: absolute;
+    margin-left: 2.8%;
+    height: 5%;
+    width: 4%;
+    background-color: black;
+    top: 113px;
+    z-index: 1;
+}
+
+body a.lien img.num1 {
+    position: absolute;
+    height: 10%;
+    width: 5%;
+    background-color: black;
+    margin-left: 3.5%;
+    top: 48px;
+    z-index: 1;
+    left: 0px;
+}
+
+body a.lien img.num2 {
+    position: absolute;
+    margin-left: 4%;
+    height: 8%;
+    width: 4%;
+    background-color: black;
+    z-index: 2;
+    left: 0px;
+}
+
+body a.lien img.num3 {
+    position: absolute;
+    margin-left: 4%;
+    height: 8%;
+    width: 4%;
+    background-color: black;
+    z-index: 1;
+    left: 0px;
+}
+
+
+/* DIV */
+
+body div.class {
+    background: rgba(0, 0, 0, .8);
+    box-sizing: border-box;
+    box-shadow: 0 15px 25px rgba(0, 0, 0, .5);
+    border-radius: 10px;
+    position: relative;
+    margin-left: auto;
+    margin-right: auto;
+    height: auto;
+    width: 600px;
+    vertical-align: middle;
+    border-radius: 10px;
+    color: white;
+    border: 1px solid #2196F3;
+}
+
+body div.class div {
+    margin-top: 5%;
+    background-color: #070708;
+    border-radius: 10px;
+}
+
+body a.lien div {
+    flex-wrap: nowrap;
+    margin-top: 7%;
+    background-color: #070708;
+}
+
+
+/* P/A */
+
+body div.class p {
+    position: relative;
+    text-align: left;
+    margin: 0 0 0 10%;
+    font-size: 18px;
+    width: 50%;
+    color: white;
+    background-color: #070708;
+    z-index: 3;
+}
+
+body div.class p.score {
+    position: relative;
+    text-align: right;
+    top: -22px;
+    margin: 0 0 0 80%;
+    font-size: 18px;
+    width: 10%;
+    color: white;
+    background-color: #070708;
+}
+
+body a.lien {
+    background: rgba(0, 0, 0, .8);
+    box-sizing: border-box;
+    box-shadow: 0 15px 25px rgba(0, 0, 0, .5);
+    border-radius: 10px;
+    position: relative;
+    margin-left: auto;
+    margin-right: auto;
+    height: 300px;
+    width: 600px;
+    vertical-align: middle;
+    border-radius: 10px;
+    color: white;
+    border: 1px solid #2196F3;
+}
+
+body a.lien:hover {
+    color: rgba(233, 130, 64, 0.5);
+}
+
+body a.lien p {
+    position: relative;
+    text-align: left;
+    margin: 0 0 0 10%;
+    font-size: 18px;
+    width: 50%;
+    color: white;
+    background-color: #070708;
+}
+
+body a.lien p.score {
+    position: relative;
+    text-align: right;
+    top: -22px;
+    margin: 0 0 0 80%;
+    font-size: 18px;
+    width: 10%;
+    color: white;
+    background-color: #070708;
+}
+
+body p {
+    text-align: center;
+    font-size: 18px;
+    color: white;
+}
+
+body a {
+    color: white;
+}
+
+.nav_links li a {
+    transition: all 0.3s ease 0s;
+    color: white
+}
+
+.nav_links li a:hover {
+    color: rgba(233, 130, 64, 0.5);
+}
+
+body a {
+    float: center;
+    display: block;
+    color: black;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    font-size: 17px;
+}
+
+body a:hover {
+    color: black;
+}
+
+body a.active {
+    background-color: rgba(233, 130, 64, 0.8);
+    color: white;
+}
+
+
+/* BUTTON */
+
+li,
+a,
+button {
+    font-family: "Montserrat", sans-serif;
+    font-weight: 500;
+    font-size: 16px;
+    color: #edf0f1;
+    text-decoration: none;
+}
+
+button {
+    padding: 9px 25px;
+    background-color: rgba(233, 130, 64, 0.8);
+    border: none;
+    border-radius: 50px;
+    cursor: pointer;
+    transition: all 0.3s ease 0s;
+}
+
+button:hover {
+    background-color: rgba(233, 130, 64, 0.5);
+}
+
+body input[type=text] {
+    float: right;
+    padding: 6px;
+    border: none;
+    margin-top: 8px;
+    margin-right: 16px;
+    font-size: 17px;
+}
+
+
+/* When the screen is less than 600px wide, stack the links and the search field vertically instead of horizontally */
+
+@media screen and (max-width: 600px) {
+    .topnav a,
+    .topnav input[type=text] {
+        float: none;
         display: block;
-        color: black;
-        text-align: center;
-        padding: 14px 16px;
-        text-decoration: none;
-        font-size: 17px;
+        text-align: left;
+        width: 100%;
+        margin: 0;
+        padding: 14px;
     }
-    /* Change the color of links on hover */
-    
-    body a:hover {
-        color: black;
+    .topnav input[type=text] {
+        border: 1px solid #ccc;
     }
-    /* Style the "active" element to highlight the current page */
-    
-    body a.active {
-        background-color: #2196F3;
-        color: white;
-    }
+}

@@ -44,7 +44,7 @@ if (!empty($_SESSION && isset($_SESSION['role']))) {
                         SELECT nom,prenom,c.score
                         FROM user
                         INNER JOIN Classement AS c ON c.id = user.id
-                        ORDER BY c.score DESC
+                        ORDER BY c.score DESC , nom ASC
                         SQL;
             $stmt = $pdo->prepare($rqt);
             $stmt->execute();
@@ -66,13 +66,35 @@ if (!empty($_SESSION && isset($_SESSION['role']))) {
     {
         $numb = $nbmax;
     }
-            for($i=0;$i<$numb;$i++)
-            {
-                ?>
-               <p> <?php print($i+1);print(" -- "); print_r($array[$i]['nom']);print_r(" ");print_r($array[$i]['prenom']);print_r(" : ");?></p>
-               <p class="score"> <?php print_r($array[$i]['score']); ?></p>
-                <?php 
-            }
+    for($i=0;$i<$numb;$i++)
+    {
+        if($i==0){
+            ?>
+            <img class="num<?php  print($i+1);?>" src="../Img/couronne.png" alt="number one"/>
+            <p> <?php print($i+1);print(" -- "); print_r($array[$i]['nom']);print_r(" ");print_r($array[$i]['prenom']);print_r(" : ");?></p>
+            <p class="score"> <?php print_r($array[$i]['score']); ?></p>
+            <?php 
+        }
+        elseif($i==1){
+            ?>
+            <img class="num<?php  print($i+1);?>" src="../img/silver.png" alt="second"/>
+            <p> <?php print($i+1);print(" -- "); print_r($array[$i]['nom']);print_r(" ");print_r($array[$i]['prenom']);print_r(" : ");?></p>
+            <p class="score"> <?php print_r($array[$i]['score']); ?></p>
+             <?php 
+        }
+        elseif($i==2){
+            ?>
+            <img class="num<?php  print($i+1);?>" src="../img/bronze.png" alt="third"/>
+            <p> <?php print($i+1);print(" -- "); print_r($array[$i]['nom']);print_r(" ");print_r($array[$i]['prenom']);print_r(" : ");?></p>
+            <p class="score"> <?php print_r($array[$i]['score']); ?></p>
+             <?php 
+        }else{
+        ?>
+       <p class="<?php  print($i+1);?>"> <?php print($i+1);print(" -- "); print_r($array[$i]['nom']);print_r(" ");print_r($array[$i]['prenom']);print_r(" : ");?></p>
+       <p class="score"> <?php print_r($array[$i]['score']); ?></p>
+        <?php 
+        }
+    }
                 ?>
         </div>
         </a>
