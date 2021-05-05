@@ -51,7 +51,7 @@
         <h2 class="score">Votre Score :  <?php print_r($array[0]["score"]); ?> OTR@coins</h2>
         <h2 class="miss">Voici vos missions : </h2>
 	<a class="lien1" href="défis_day.php"><p> Défis du jour </p> </a>
-	<a class="lien2" href="défis_réal.php"><p> Défis réalisés</p> </a>
+	<a class="lien2" href="défis_réal.php"><p> Défis</p> </a>
 
 
     </body>

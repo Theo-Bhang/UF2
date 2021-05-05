@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Hôte : 127.0.0.1:3306
--- Généré le : mar. 04 mai 2021 à 12:23
+-- Généré le : mer. 05 mai 2021 à 15:12
 -- Version du serveur :  5.7.31
 -- Version de PHP : 7.4.9
 
@@ -89,12 +89,48 @@ INSERT INTO `classement` (`idClassement`, `id`, `Score`) VALUES
 
 DROP TABLE IF EXISTS `defis`;
 CREATE TABLE IF NOT EXISTS `defis` (
+  `defisID` int(10) UNSIGNED NOT NULL AUTO_INCREMENT,
+  `titre` varchar(250) COLLATE utf32_bin DEFAULT NULL,
+  `description` varchar(250) COLLATE utf32_bin DEFAULT NULL,
+  `valeur` varchar(250) COLLATE utf32_bin DEFAULT NULL,
+  `date_publication` date DEFAULT NULL,
+  `date_fin` date DEFAULT NULL,
+  PRIMARY KEY (`defisID`)
+) ENGINE=InnoDB AUTO_INCREMENT=3 DEFAULT CHARSET=utf32 COLLATE=utf32_bin;
+
+--
+-- Déchargement des données de la table `defis`
+--
+
+INSERT INTO `defis` (`defisID`, `titre`, `description`, `valeur`, `date_publication`, `date_fin`) VALUES
+(1, 'Terre de culture', 'Montre tes talents de jardinier a la camera, si tu as la main verte c\'est le moment de nous cultiver ! ', '150', '2021-05-05', '2021-06-06'),
+(2, 'Titre', 'titre', '100', '2021-05-05', '2021-06-06');
+
+-- --------------------------------------------------------
+
+--
+-- Structure de la table `defis_du_jour`
+--
+
+DROP TABLE IF EXISTS `defis_du_jour`;
+CREATE TABLE IF NOT EXISTS `defis_du_jour` (
   `idDefis` int(10) UNSIGNED NOT NULL AUTO_INCREMENT,
   `titre` varchar(255) COLLATE utf32_bin NOT NULL,
   `description` varchar(255) COLLATE utf32_bin NOT NULL,
-  `date_fin` date NOT NULL,
+  `date_fin` date NOT NULL DEFAULT '2000-01-21',
+  `valeur` varchar(250) COLLATE utf32_bin NOT NULL,
+  `date_publication` date NOT NULL DEFAULT '2021-05-05',
   PRIMARY KEY (`idDefis`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf32 COLLATE=utf32_bin;
+) ENGINE=InnoDB AUTO_INCREMENT=4 DEFAULT CHARSET=utf32 COLLATE=utf32_bin;
+
+--
+-- Déchargement des données de la table `defis_du_jour`
+--
+
+INSERT INTO `defis_du_jour` (`idDefis`, `titre`, `description`, `date_fin`, `valeur`, `date_publication`) VALUES
+(1, 'DÃ©couverte de l\'inconnu !', 'Essayes de prÃ©senter quelque chose qui te sembles digne de partager dans une langue Ã©trangÃ¨re !', '2021-05-05', '200', '2021-05-05'),
+(2, 'A vos marques !', 'Allez chercher un accessoire et faites en une description dans une langues etrangere.', '2021-05-06', '150', '2021-05-06'),
+(3, 'Donaaa', 'Repompa repompa', '2021-05-04', '5000', '2021-05-04');
 
 -- --------------------------------------------------------
 
@@ -132,6 +168,54 @@ INSERT INTO `user` (`id`, `email`, `nom`, `prenom`, `mdp`, `inscrit`, `role`) VA
 (18, 't.bhang2112@gmail.com', 'Bhang', 'ThÃ©o', '$2y$12$Y3Ij2gtXeo0RpgLoosQNHeIbrqHWo70/Cp3WhtgQs.ZDqxtJeJOie', 'non', 'user'),
 (19, 'Fayolle.A@gmail.com', 'Fayolle', 'Ancelot', '$2y$12$cCL49OzoaQyZna4z4RB/feMI0TSPepvCznSYJpJkpJN80XubgCa.S', 'non', 'user');
 
+-- --------------------------------------------------------
+
+--
+-- Structure de la table `valide_defi`
+--
+
+DROP TABLE IF EXISTS `valide_defi`;
+CREATE TABLE IF NOT EXISTS `valide_defi` (
+  `id` int(11) DEFAULT NULL,
+  `defisID` int(10) UNSIGNED DEFAULT NULL,
+  `idAdmin` int(10) UNSIGNED DEFAULT NULL,
+  `date_valide` date DEFAULT NULL,
+  KEY `id` (`id`),
+  KEY `defisID` (`defisID`),
+  KEY `idAdmin` (`idAdmin`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf32 COLLATE=utf32_bin;
+
+--
+-- Déchargement des données de la table `valide_defi`
+--
+
+INSERT INTO `valide_defi` (`id`, `defisID`, `idAdmin`, `date_valide`) VALUES
+(4, 1, 2, '2021-05-05');
+
+-- --------------------------------------------------------
+
+--
+-- Structure de la table `valide_defi_jour`
+--
+
+DROP TABLE IF EXISTS `valide_defi_jour`;
+CREATE TABLE IF NOT EXISTS `valide_defi_jour` (
+  `idAdmin` int(150) UNSIGNED DEFAULT NULL,
+  `idDefis_jour` int(10) UNSIGNED DEFAULT NULL,
+  `date_valide` date NOT NULL,
+  `id` int(10) DEFAULT NULL,
+  KEY `idAdmin` (`idAdmin`),
+  KEY `idDefis` (`idDefis_jour`),
+  KEY `id` (`id`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf32 COLLATE=utf32_bin;
+
+--
+-- Déchargement des données de la table `valide_defi_jour`
+--
+
+INSERT INTO `valide_defi_jour` (`idAdmin`, `idDefis_jour`, `date_valide`, `id`) VALUES
+(2, 1, '2021-05-04', 4);
+
 --
 -- Contraintes pour les tables déchargées
 --
@@ -141,6 +225,22 @@ INSERT INTO `user` (`id`, `email`, `nom`, `prenom`, `mdp`, `inscrit`, `role`) VA
 --
 ALTER TABLE `classement`
   ADD CONSTRAINT `fk_id_idClassment` FOREIGN KEY (`id`) REFERENCES `user` (`id`);
+
+--
+-- Contraintes pour la table `valide_defi`
+--
+ALTER TABLE `valide_defi`
+  ADD CONSTRAINT `valide_defi_ibfk_1` FOREIGN KEY (`id`) REFERENCES `user` (`id`),
+  ADD CONSTRAINT `valide_defi_ibfk_2` FOREIGN KEY (`defisID`) REFERENCES `defis` (`defisID`),
+  ADD CONSTRAINT `valide_defi_ibfk_3` FOREIGN KEY (`idAdmin`) REFERENCES `admin` (`idAdmin`);
+
+--
+-- Contraintes pour la table `valide_defi_jour`
+--
+ALTER TABLE `valide_defi_jour`
+  ADD CONSTRAINT `valide_defi_jour_ibfk_1` FOREIGN KEY (`idAdmin`) REFERENCES `admin` (`idAdmin`),
+  ADD CONSTRAINT `valide_defi_jour_ibfk_2` FOREIGN KEY (`idDefis_jour`) REFERENCES `defis_du_jour` (`idDefis`),
+  ADD CONSTRAINT `valide_defi_jour_ibfk_3` FOREIGN KEY (`id`) REFERENCES `user` (`id`);
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
