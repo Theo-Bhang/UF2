@@ -39,27 +39,46 @@
         $id = $_SESSION['id'];
         $rqt = <<<SQL
             SELECT titre,description
-            FROM defis_du_jour
-            where date_publication LIKE DATE(NOW())
+            FROM defis
         SQL;
         $stmt = $pdo->prepare($rqt);
         $stmt->execute();
         $array = $stmt->fetchAll();
+
         $rqt2 = <<<SQL
         SELECT DATE_FORMAT(date_valide, "%d/%m/%Y") AS date_val
-        FROM valide_defi_jour
+        FROM valide_defi
         WHERE id = :id
         SQL;
         $stmt2 = $pdo->prepare($rqt2);
         $stmt2->execute(["id" => $id]);
         $array2 = $stmt2->fetchAll();
 
-    if (!empty($array) && empty($array2)) {
-        ?> 
-        <h1 class="welc">Voici le défis du jour : <?php print($array[0]["titre"]); ?></h1>
+        $rqt3 = <<<SQL
+        SELECT COUNT(*) AS nbmax
+        FROM defis
+        SQL;
+        $stmt3 = $pdo->prepare($rqt3);
+        $stmt3->execute();
+        $array3= $stmt3->fetchAll();
+        $nbmax = $array3[0]["nbmax"];
+        ?>
+      
+        <?php 
+
+if (!empty($array) && empty($array2)) {
+    ?> 
+    <h1 class="welc">Voici vos défis  : </h1>
+    <br>
+    <?php
+    for ($i=0; $i < $nbmax  ; $i++) { 
+
+    ?>
+    <div>
+        <h2 class= "welc"><?php print($array[$i]["titre"]); ?></h2>
         <br>
-        <h2 class="desc"><?php print_r($array[0]["description"]); ?></h2>
-                   <form action="#" method="post" enctype="multipart/form-data">
+        <h2 class="desc"><?php print_r($array[$i]["description"]); ?></h2>
+        <form action="#" method="post" enctype="multipart/form-data">
             <div class="file-input">
                 <input type="file" id="file" class="file">
                 <label for="file">
@@ -81,15 +100,17 @@
                 });
             </script>
         </form>
-        <?php
-    }else{
-        ?>
-        <h1 class="welc">Pas de défi pour aujourd'hui...</h1>
-        <br>
-        <h2 class="desc">Revenez demain !</h2>
-        <?php
-        
+    </div>
+    <?php
     }
+}else{
+    ?>
+    <h1 class="welc">Pas de défi pour aujourd'hui...</h1>
+    <br>
+    <h2 class="desc">Revenez demain !</h2>
+    <?php
+    
+}
 ?>
 
 <?php 
