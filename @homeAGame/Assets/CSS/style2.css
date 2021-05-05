@@ -116,7 +116,7 @@ body a.acc {
     vertical-align: middle;
     border-radius: 10px;
     color: white;
-    border: 1px solid #2196F3;
+    border: 1px solid rgba(233, 130, 64, 0.8);
     top: 100px;
 }
 
@@ -141,7 +141,7 @@ body a.lien2 {
     vertical-align: middle;
     border-radius: 10px;
     color: white;
-    border: 1px solid #2196F3;
+    border: 1px solid rgba(233, 130, 64, 0.8);
 }
 
 body a.lien2:hover {
@@ -161,7 +161,7 @@ body a.lien {
     vertical-align: middle;
     border-radius: 10px;
     color: white;
-    border: 1px solid #2196F3;
+    border: 1px solid rgba(233, 130, 64, 0.8);
 }
 
 body a.lien:hover {
@@ -224,7 +224,7 @@ body a.lien1 {
     width: 600px;
     border-radius: 10px;
     color: white;
-    border: 1px solid #2196F3;
+    border: 1px solid rgba(233, 130, 64, 0.8);
 }
 
 

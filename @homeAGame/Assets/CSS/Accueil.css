@@ -128,7 +128,7 @@ body div.class {
     vertical-align: middle;
     border-radius: 10px;
     color: white;
-    border: 1px solid #2196F3;
+    border: 1px solid rgba(233, 130, 64, 0.8);
 }
 
 body div.class div {
@@ -181,7 +181,7 @@ body a.lien {
     vertical-align: middle;
     border-radius: 10px;
     color: white;
-    border: 1px solid #2196F3;
+    border: 1px solid rgba(233, 130, 64, 0.8);
 }
 
 body a.lien:hover {

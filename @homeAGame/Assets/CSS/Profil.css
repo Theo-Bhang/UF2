@@ -81,7 +81,7 @@ body a.lien {
     vertical-align: middle;
     border-radius: 10px;
     color: white;
-    border: 1px solid #2196F3;
+    border: 1px solid rgba(233, 130, 64, 0.8);
 }
 
 body a.lien:hover {
@@ -160,7 +160,7 @@ body a:hover {
 /* Style the "active" element to highlight the current page */
 
 body a.active {
-    background-color: #2196F3;
+    background-color: rgba(233, 130, 64, 0.8);
     color: white;
 }
 
@@ -250,7 +250,7 @@ body input[type=password] {
 
 .formu input[type=submit] {
     background-color: white;
-    border: 1px solid #0088a9;
+    border: 1px solid rgba(233, 130, 64, 0.5);
     color: #0088a9;
     padding: 5px;
     transition: all 0.5s ease;
@@ -268,7 +268,7 @@ body input[type=password] {
 
 .formu input[type=button] {
     background-color: white;
-    border: 1px solid #0088a9;
+    border: 1px solid rgba(233, 130, 64, 0.5);
     color: #0088a9;
     padding: 5px;
     transition: all 0.5s ease;
@@ -278,7 +278,7 @@ body input[type=password] {
 }
 
 .formu input[type=button]:hover {
-    background-color: #0088a9;
+    background-color: rgba(233, 130, 64, 0.5);
     color: white;
     border-radius: 150px;
     cursor: pointer;
@@ -286,14 +286,14 @@ body input[type=password] {
 
 .formu ::-webkit-input-placeholder {
     /* WebKit browsers */
-    color: #0088a9;
+    color: rgba(233, 130, 64, 0.8);
     font-style: italic;
     text-align: center;
 }
 
 .formu :-moz-placeholder {
     /* Mozilla Firefox 4 to 18 */
-    color: #0088a9;
+    color: rgba(233, 130, 64, 0.8);
     opacity: 1;
     font-style: italic;
     text-align: center;
@@ -301,7 +301,7 @@ body input[type=password] {
 
 .formu ::-moz-placeholder {
     /* Mozilla Firefox 19+ */
-    color: #0088a9;
+    color: rgba(233, 130, 64, 0.8);
     opacity: 1;
     font-style: italic;
     text-align: center;
@@ -309,14 +309,14 @@ body input[type=password] {
 
 .formu :-ms-input-placeholder {
     /* Internet Explorer 10+ */
-    color: #0088a9;
+    color: rgba(233, 130, 64, 0.8);
     font-style: italic;
 }
 
 .modif input[type=submit] {
     background-color: white;
-    border: 1px solid #0088a9;
-    color: #0088a9;
+    border: 1px solid rgba(233, 130, 64, 0.8);
+    color: rgba(233, 130, 64, 0.8);
     padding: 5px;
     transition: all 0.5s ease;
     width: 300px;
@@ -325,7 +325,7 @@ body input[type=password] {
 }
 
 .modif input[type=submit]:hover {
-    background-color: #0088a9;
+    background-color: rgba(233, 130, 64, 0.8);
     color: white;
     border-radius: 150px;
     cursor: pointer;
@@ -333,8 +333,8 @@ body input[type=password] {
 
 .modif input[type=button] {
     background-color: white;
-    border: 1px solid #0088a9;
-    color: #0088a9;
+    border: 1px solid rgba(233, 130, 64, 0.8);
+    color: rgba(233, 130, 64, 0.8);
     padding: 5px;
     transition: all 0.5s ease;
     width: 300px;
@@ -343,7 +343,7 @@ body input[type=password] {
 }
 
 .modif input[type=button]:hover {
-    background-color: #0088a9;
+    background-color: rgba(233, 130, 64, 0.8);
     color: white;
     border-radius: 150px;
     cursor: pointer;
@@ -351,14 +351,14 @@ body input[type=password] {
 
 .modif ::-webkit-input-placeholder {
     /* WebKit browsers */
-    color: #0088a9;
+    color: rgba(233, 130, 64, 0.8);
     font-style: italic;
     text-align: center;
 }
 
 .modif :-moz-placeholder {
     /* Mozilla Firefox 4 to 18 */
-    color: #0088a9;
+    color: rgba(233, 130, 64, 0.8);
     opacity: 1;
     font-style: italic;
     text-align: center;
@@ -366,7 +366,7 @@ body input[type=password] {
 
 .modif ::-moz-placeholder {
     /* Mozilla Firefox 19+ */
-    color: #0088a9;
+    color: rgba(233, 130, 64, 0.8);
     opacity: 1;
     font-style: italic;
     text-align: center;
@@ -374,7 +374,7 @@ body input[type=password] {
 
 .modif :-ms-input-placeholder {
     /* Internet Explorer 10+ */
-    color: #0088a9;
+    color: rgba(233, 130, 64, 0.8);
     font-style: italic;
 }
 
