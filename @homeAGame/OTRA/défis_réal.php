@@ -66,7 +66,7 @@
       
         <?php 
 
-if (!empty($array) && empty($array2)) {
+if (!empty($array)) {
     ?> 
     <h1 class="welc">Voici vos défis  : </h1>
     <br>
@@ -102,6 +102,12 @@ if (!empty($array) && empty($array2)) {
         </form>
     </div>
     <?php
+       if (!empty($array2) && isset($array2[$i]["date_val"])) {
+        ?>
+            <p class="real">Ce defis a déjà été réalisé le : <?php print_r($array2[$i]["date_val"]); ?></p>
+
+        <?php
+    }
     }
 }else{
     ?>
@@ -111,16 +117,8 @@ if (!empty($array) && empty($array2)) {
     <?php
     
 }
-?>
 
-<?php 
-
-    if (!empty($array2)) {
-        ?>
-            <p class="real">Ce defis a déjà été réalisé le : <?php print_r($array2[0]["date_val"]); ?></p>
-
-        <?php
-    }
+ 
 ?>
     </body>
 </html> 

@@ -94,7 +94,7 @@
 
 <?php 
 
-    if (!empty($array2)) {
+    if (!empty($array2) && !empty($array)) {
         ?>
             <p class="real">Ce defis a déjà été réalisé le : <?php print_r($array2[0]["date_val"]); ?></p>
 
