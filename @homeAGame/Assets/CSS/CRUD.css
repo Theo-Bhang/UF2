@@ -21,10 +21,33 @@
         text-align: center;
     }
     
+    div.div p,
+    div.div label {
+        text-align: center;
+        background-color: rgba(0, 0, 0, .8);
+    }
+    
+    div.div form {
+        background-color: rgba(0, 0, 0, .8);
+    }
+    
+    .input {
+        width: 150px;
+        color: white;
+        text-align: center;
+        height: 50px;
+    }
+    
+    .formu,
+    .p {
+        background-color: rgba(0, 0, 0, .8);
+    }
+    
     div h2,
     p,
     a {
-        background-color: rgba(0, 0, 0, .8);
+        background-color: #24252A;
+        text-align: center;
     }
     
     div input {
@@ -35,7 +58,7 @@
     
     .c1 {
         text-align: left;
-        color: #2196F3;
+        color: rgba(233, 130, 64, 0.8);
     }
     
     div img {
@@ -102,12 +125,12 @@
     }
     
     .nav_links li a:hover {
-        color: #0088a9;
+        color: rgba(233, 130, 64, 0.5);
     }
     
     button {
         padding: 9px 25px;
-        background-color: rgba(0, 136, 169, 1);
+        background-color: rgba(233, 130, 64, 0.8);
         border: none;
         border-radius: 50px;
         cursor: pointer;
@@ -115,7 +138,7 @@
     }
     
     button:hover {
-        background-color: rgba(0, 136, 169, 0.8);
+        background-color: rgba(233, 130, 64, 0.5);
     }
     
     label {

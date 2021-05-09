@@ -49,11 +49,12 @@
 <header>
     <img class="logo" src="../img/LOGO-ON-THE-ROAD.png" alt="logo">
     <nav>
-        <ul class="nav_links">
-            <li><a href="../Accueil/AdminCenter.php">Accueil</a></li>
-            <li><a href="../Divers/about.php">Gestion User</a></li>
-            <li><a href="../Deco/deco.php">Se déconnecter</a></li>
-        </ul>
+    <ul class="nav_links">
+                <li><a href="../Accueil/AdminCenter.php">Accueil</a></li>
+				<li><a href="#">Gestion User</a></li>
+                <li><a href="../Admin/Points.php">Attribuer Points</a></li>
+                <li><a href="../Deco/deco.php">Se déconnecter</a></li>
+            </ul>
     </nav>
     <a class="cta" href="../Gestion/profil.php"><button>Mon compte</button></a>
 </header>
@@ -73,14 +74,13 @@
             {
                 ?>
                 <div class="div<?php print($i);?>">
-                    <p><?php print_r($array[$i]['email']);  ?></p>
+                    <p class="p"><?php print_r($array[$i]['email']);  ?></p>
                     <br>
-                    <p><?php print_r($array[$i]['prenom']);  ?></p>
+                    <p class="p"><?php print_r($array[$i]['prenom']);print_r(" "); print_r($array[$i]['nom']);   ?></p>
                     <br>
-                    <p><?php print_r($array[$i]['nom']);  ?></p>
                     <form class='formu' method='POST' action='#'>
                         
-                        <label for="supmail">Voulez vous supprimer <?php  print_r($array[$i]['nom']);print(" ");print_r($array[$i]['prenom']); ?> ?</label>
+                        <label class="p" for="supmail">Voulez vous supprimer <?php  print_r($array[$i]['nom']);print(" ");print_r($array[$i]['prenom']); ?> ?</label>
                         <input type="checkbox" name="supmail" />
                         <input type="hidden" name="mail" value="<?php print($array[$i]['email']);?>"/>
                         <input type="hidden" name="numb" value="<?php print($numb-1);?>"/>
