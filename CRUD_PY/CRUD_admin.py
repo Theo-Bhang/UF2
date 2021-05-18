@@ -14,7 +14,7 @@ def createdb():
     # Connectez- vous à la base de données.
     connection = pymysql.connect(host='localhost',
                              user='root',
-                             password='',                             
+                             password='admin',                             
                              db='otra',
                              charset='utf8mb4',
                              cursorclass=pymysql.cursors.DictCursor)
@@ -49,7 +49,7 @@ def supUser():
     # Connectez- vous à la base de données.
     connection = pymysql.connect(host='localhost',
                              user='root',
-                             password='',                             
+                             password='admin',                             
                              db='otra',
                              charset='utf8mb4',
                              cursorclass=pymysql.cursors.DictCursor)
@@ -86,7 +86,7 @@ def updateDb():
     # Connectez- vous à la base de données.
     connection = pymysql.connect(host='localhost',
                              user='root',
-                             password='',                             
+                             password='admin',                             
                              db='otra',
                              charset='utf8mb4',
                              cursorclass=pymysql.cursors.DictCursor)
@@ -118,7 +118,7 @@ def readDb() :
     # Connectez- vous à la base de données.
     connection = pymysql.connect(host='localhost',
                              user='root',
-                             password='',                             
+                             password='admin',                             
                              db='otra',
                              charset='utf8mb4',
                              cursorclass=pymysql.cursors.DictCursor)
@@ -149,7 +149,7 @@ def readupDb1() :
     # Connectez- vous à la base de données.
     connection = pymysql.connect(host='localhost',
                              user='root',
-                             password='',                             
+                             password='admin',                             
                              db='otra',
                              charset='utf8mb4',
                              cursorclass=pymysql.cursors.DictCursor)
@@ -181,7 +181,7 @@ def readupDb2() :
     # Connectez- vous à la base de données.
     connection = pymysql.connect(host='localhost',
                              user='root',
-                             password='',                             
+                             password='admin',                             
                              db='otra',
                              charset='utf8mb4',
                              cursorclass=pymysql.cursors.DictCursor)
